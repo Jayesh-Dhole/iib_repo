@@ -6,7 +6,7 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/07-01-25-callable-Comsumer/icons/full/obj16/callable_flow_Consumer.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/07-01-25-callable-Comsumer/icons/full/obj30/callable_flow_Consumer.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmCallableFlowInvoke.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="527,24" targetApplication="07-01-25-callable-Provider" targetEndpointName="Target1" callPreference="RemoteOnly">
+      <nodes xmi:type="ComIbmCallableFlowInvoke.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="521,78" targetApplication="07-01-25-callable-Provider" targetEndpointName="Target1" callPreference="RemoteOnly">
         <translation xmi:type="utility:ConstantString" string="Callable Flow Invoke"/>
       </nodes>
       <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="212,45" URLSpecifier="/callable" messageDomainProperty="XMLNSC">
