@@ -1,0 +1,12 @@
+CREATE COMPUTE MODULE Consumer_mf_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+		SET OutputLocalEnvironment.Destination.HTTP.RequestURL = 'http://localhost:7080/path2';
+	END;
+END MODULE;

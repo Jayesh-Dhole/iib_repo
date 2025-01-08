@@ -1,0 +1,16 @@
+CREATE COMPUTE MODULE postPath2_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE ID1 REFERENCE TO InputRoot.JSON.Data.ID;
+		IF ID1 = 120 THEN
+			SET OutputRoot.XMLNSC.Result = 'This is 120';
+			
+		END IF;
+	END;
+END MODULE;

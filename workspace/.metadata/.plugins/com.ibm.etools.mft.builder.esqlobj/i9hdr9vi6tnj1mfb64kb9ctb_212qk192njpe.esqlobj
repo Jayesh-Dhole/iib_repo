@@ -1,0 +1,9 @@
+CREATE COMPUTE MODULE Database_Operation_mf_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE stmt CHARACTER;
+		SET stmt = 'CREATE TABLE Person11(name varchar2(20),age number)';
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+END MODULE;

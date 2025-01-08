@@ -1,0 +1,4 @@
+CREATE PROCEDURE SelectMultipleData ( )
+LANGUAGE DATABASE
+Dynamic Result sets 2
+EXTERNAL NAME "Select_multiple";

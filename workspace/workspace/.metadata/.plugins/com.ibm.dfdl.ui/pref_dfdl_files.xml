@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+<preferenceForDFDLFile dfdlFileLocation="/File_FixedLen/dfdl.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Documents\fixedlength.txt" messageRootUsedForLastParse="dfdl"/>
+<preferenceForDFDLFile dfdlFileLocation="/File_FixedLen/dfdf.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Documents\fixedlength.txt" messageRootUsedForLastParse="dfdf"/>
+<preferenceForDFDLFile dfdlFileLocation="/File_Delimited/dfdl1.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Documents\delimitedinput.txt" messageRootUsedForLastParse="dfdl1"/>
+</preferences>

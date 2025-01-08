@@ -1,0 +1,55 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inref REFERENCE TO InputRoot.XMLNSC.Root;
+
+		DECLARE chid1 REFERENCE TO InputRoot.XMLNSC.Root.Header.channelId;
+		DECLARE chid CHARACTER;
+		SET chid = chid1;
+
+		IF inref.Header.channelId = 'TPH' THEN
+			DECLARE i INTEGER 1 ;
+			DECLARE inref2 REFERENCE TO InputRoot.XMLNSC.Root.Body.Data.catalog.book[1];
+
+			DECLARE inref3 REFERENCE TO inref2.author;
+
+			WHILE inref3 = 'Corets, Eva' DO
+				SET OutputRoot.XMLNSC.Root.Body.Data.catalog[i].book.author = inref3.book.author;
+				SET OutputRoot.XMLNSC.Root.Body.Data.catalog[i].book.title = inref3.book.title;
+				SET OutputRoot.XMLNSC.Root.Body.Data.catalog[i].book.genre = inref3.book.genre;
+				SET OutputRoot.XMLNSC.Root.Body.Data.catalog[i].book.price = inref3.book.price;
+				SET OutputRoot.XMLNSC.Root.Body.Data.catalog[i].book.publish_date = inref3.book.publish_date;
+				SET OutputRoot.XMLNSC.Root.Body.Data.catalog[i].book.description = inref3.book.description;				
+
+
+--				SET OutputRoot.XMLNSC.Root.Body.Data.catalog[i].book NAME 'title' VALUE inref3.book.title;
+--				SET OutputRoot.XMLNSC.Root.Body.Data.catalog[i].book NAME 'genre' VALUE inref3.book.genre;
+--				SET OutputRoot.XMLNSC.Root.Body.Data.catalog[i].book NAME 'price' VALUE inref3.book.price;
+--				SET OutputRoot.XMLNSC.Root.Body.Data.catalog[i].book NAME 'publish_date' VALUE inref3.book.publish_date;
+--				SET OutputRoot.XMLNSC.Root.Body.Data.catalog[i].book NAME 'description' VALUE inref3.book.description;
+
+				SET i = i+1;
+				MOVE inref3 NEXTSIBLING;
+			END WHILE;
+		ELSE
+
+		END IF;
+
+
+		SET OutputRoot = InputRoot;
+	END;

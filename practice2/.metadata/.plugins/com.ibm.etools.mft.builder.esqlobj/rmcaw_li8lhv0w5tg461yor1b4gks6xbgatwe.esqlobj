@@ -1,0 +1,9 @@
+CREATE COMPUTE MODULE STORED_PROC_DYNAMIC_RES_SET_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	
+
+		CALL RRR(Environment.Result1[],Environment.Result2[]);
+		
+		SET OutputRoot.JSON.Data.display.Table[]=Environment.Result1[];
+		SET OutputRoot.JSON.Data.display.Table[]=Environment.Result2[];
+		RETURN TRUE;

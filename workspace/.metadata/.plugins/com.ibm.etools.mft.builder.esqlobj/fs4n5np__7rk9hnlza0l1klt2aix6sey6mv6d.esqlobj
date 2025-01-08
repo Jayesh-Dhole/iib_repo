@@ -1,0 +1,31 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN		
+		--FOR DATA AS INPUT FILE AS TEXT CHARACTERS WHERE WE HAVE TO CONVERT THE DATA INTO THE CHARACTYER FORMAT AS
+		-- THE SOAP CONVERTS THE FORMAT INTO THE BLOB FORMAT WHICH IS NOT UNDERSTANDABLE
+		DECLARE var REFERENCE to InputRoot.SOAP.Attachment.*.BLOB.BLOB;
+		DECLARE ch CHARACTER cast(var as CHARACTER CCSID InputRoot.Properties.CodedCharSetId ENCODING InputRoot.Properties.Encoding);
+		SET OutputRoot.SOAP.Body.ns:NewOperationResponse.out =ch;		
+		
+		--FOR DATA AS AN INPUT FILE AS ATTACHMENT INM ANY FORMAT AS IMAGE(ifrer,jpg,jpeg)
+--		SET OutputRoot.BLOB.BLOB = InputRoot.SOAP.Attachment.*.BLOB.BLOB;
+--		PROPAGATE TO TERMINAL 'out1';
+--
+--		SET OutputRoot.SOAP.Body.ns:NewOperationResponse.out1 = InputRoot.SOAP.Body.ns:NewOperation.in1;
+
+	END;

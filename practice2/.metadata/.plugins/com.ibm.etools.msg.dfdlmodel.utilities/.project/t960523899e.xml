@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="04-12-24-OVERRIDE+WHOLE-FILE">
+  <XSDCollection href="platform:/resource/04-12-24-OVERRIDE+WHOLE-FILE/ssaa.xsd" prefix="" targetNamespace="">
+    <import name="IBMdefined/CommaSeparatedFormat.xsd" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
+    <element href="platform:/resource/04-12-24-OVERRIDE+WHOLE-FILE/ssaa.xsd#//ssaa;XSDElementDeclaration" name="ssaa"/>
+  </XSDCollection>
+  <XSDCollection href="platform:/resource/04-12-24-OVERRIDE+WHOLE-FILE/IBMdefined/CommaSeparatedFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
+</MessageBroker>

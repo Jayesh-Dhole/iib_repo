@@ -1,0 +1,43 @@
+2024-09-12 23:18:31.348118: BIP1990I: Integration server 'TEST_SERVER9' starting initialization; version '12.0.12.0' (64-bit) 
+2024-09-12 23:18:31.371054: BIP9905I: Initializing resource managers. 
+Listening for transport dt_socket at address: 9997
+2024-09-12 23:18:33.007348: BIP10112I: The resources from 'mqsicdc.par' have not been loaded because the runtime component 'ChangeDataCapture' has not been enabled. Reason: 'Restricted by Java Runtime selected'. Further detail: 'C:\Program Files\IBM\ACE\12.0.12.0\common\jdk\jre\embedded.java.yaml'. 
+2024-09-12 23:18:33.232646: BIP10112I: The resources from 'imbopentelemetry.lil' have not been loaded because the runtime component 'OpenTelemetry' has not been enabled. Reason: 'Integration Server Configuration'. Further detail: 'server.conf.yaml'. 
+2024-09-12 23:18:34.888016: BIP9906I: Reading deployed resources. 
+2024-09-12 23:18:34.926220: BIP9907I: Initializing deployed resources. 
+2024-09-12 23:18:34.930368: BIP2155I: About to 'Initialize' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-12 23:18:34.947876: BIP2155I: About to 'Initialize' the deployed resource 'Logging_Log4JLogs' of type 'Application'. 
+2024-09-12 23:18:35.055308: BIP9318E: Request to 'PreSetupValidate' resource 'Logging_Log4JLogs', 'Logging_Log4JLogs' of type 'Application' failed. 
+2024-09-12 23:18:35.055356: BIP3202E: (.initLog4j, 1.1) : An error occurred when trying to resolve the Java class or method 'com.ibm.broker.IAM3.Log4jNode.initLog4j' which is referred to by the routine 'initLog4j'. 
+2024-09-12 23:18:35.055376: BIP2943E: The Java Method 'com.ibm.broker.IAM3.Log4jNode.initLog4j' could not be found as its containing class could not be found in the deployed bar file or in the 'workpath/shared-classes/' directory. 
+2024-09-12 23:18:35.153924: BIP2155I: About to 'Start' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-12 23:18:35.176044: BIP3132I: The HTTP Listener has started listening on port '7800' for 'http' connections. 
+2024-09-12 23:18:35.176108: BIP1996I: Listening on HTTP URL '/eventlog'. 
+Started native listener for HTTP input node on port 7800 for URL /eventlog
+2024-09-12 23:18:35.176320: BIP2269I: Deployed resource 'EventLog_mf' (uuid='EventLog_mf',type='MessageFlow') started successfully. 
+2024-09-12 23:18:35.176384: BIP9332I: Application 'Logging_EventLogging' has been reloaded successfully. 
+2024-09-12 23:18:35.176424: BIP9333W: Application 'Logging_Log4JLogs' has been reloaded but contains errors which has prevented some resources from starting. 
+2024-09-12 23:18:35.487124: BIP2866I: IBM App Connect Enterprise administration security is inactive. 
+2024-09-12 23:18:35.498524: BIP3132I: The HTTP Listener has started listening on port '7601' for 'RestAdmin http' connections. 
+2024-09-12 23:18:35.499364: BIP1991I: Integration server has finished initialization. 
+2024-09-12 23:18:43.529492: BIP2152I: Configuration message received. 
+2024-09-12 23:18:43.568648: BIP2155I: About to 'Initialize' the deployed resource 'API1' of type 'RestAPI'. 
+2024-09-12 23:18:44.051676: BIP2155I: About to 'Start' the deployed resource 'API1' of type 'RestAPI'. 
+2024-09-12 23:18:44.052076: BIP1996I: Listening on HTTP URL '/api1/v1*'. 
+Started native listener for HTTP input node on port 7800 for URL /api1/v1*
+2024-09-12 23:18:44.052264: BIP2269I: Deployed resource 'gen.API1' (uuid='gen.API1',type='MessageFlow') started successfully. 
+2024-09-12 23:18:44.052320: BIP9332I: RestAPI 'API1' has been created successfully. 
+2024-09-12 23:18:44.052352: BIP9326I: The source 'API1project.generated.bar' has been successfully deployed. 
+2024-09-12 23:18:44.052700: BIP2154I: Integration server finished with Configuration message. 
+2024-09-12 23:21:44.411124: BIP2155I: About to 'Stop' the deployed resource 'API1' of type 'RestAPI'. 
+2024-09-12 23:21:46.840328: BIP2271I: Deployed resource 'gen.API1' (uuid='gen.API1',type='MessageFlow') successfully stopped. 
+2024-09-12 23:21:46.840624: BIP2155I: About to 'TearDown' the deployed resource 'API1' of type 'RestAPI'. 
+2024-09-12 23:21:46.897868: BIP9521I: RestAPI 'API1' has been deleted. 
+2024-09-12 23:21:50.009520: BIP1989I: Integration server is terminating due to a shutdown event. 
+2024-09-12 23:21:50.012096: BIP2155I: About to 'Stop' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-12 23:21:51.467116: BIP2271I: Deployed resource 'EventLog_mf' (uuid='EventLog_mf',type='MessageFlow') successfully stopped. 
+2024-09-12 23:21:51.836584: BIP2155I: About to 'TearDown' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-12 23:21:51.871416: BIP3133I: The HTTP Listener has stopped listening on port '7800' for 'http' connections. 
+node.js process.on('exit') event emitted with exitCode of 0
+node.js process.on('exit') event emitted with exitCode of 0
+2024-09-12 23:22:00.034181: BIP1992I: Integration server 'TEST_SERVER9' stopped. 

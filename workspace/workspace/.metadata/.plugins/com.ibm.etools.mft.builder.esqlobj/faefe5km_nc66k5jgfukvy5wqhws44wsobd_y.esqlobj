@@ -1,0 +1,3 @@
+CREATE PROCEDURE  ExceptionsLogs(IN Error_msg CHARACTER,IN Msg_flow CHARACTER,IN App_Name )
+LANGUAGE DATABASE
+EXTERNAL NAME "LogException";

@@ -1,0 +1,11 @@
+{
+	"MONGO": {
+		"name":"MONGO",
+		"connector":"loopback-connector-mongodb",
+		"URL":"mongodb://localhost:27017/system",
+		"host":"localhost",
+		"port":27017,
+		"username":"system",
+		"password":"sarasu10"
+	}
+}

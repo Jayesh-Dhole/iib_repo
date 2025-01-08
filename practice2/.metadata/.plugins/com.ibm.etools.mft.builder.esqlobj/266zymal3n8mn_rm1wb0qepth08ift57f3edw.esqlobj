@@ -1,0 +1,4 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN 
+		SET OutputRoot.XMLNSC.Exception = InputExceptionList;
+		END;

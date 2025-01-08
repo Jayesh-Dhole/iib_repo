@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="02-12-24-VALIDATION-TASK">
+  <XSDCollection href="platform:/resource/02-12-24-VALIDATION-TASK/IBMdefined/GeneralPurposeFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/GeneralPurposeFormat"/>
+  <XSDCollection href="platform:/resource/02-12-24-VALIDATION-TASK/Validator.xsd" prefix="" targetNamespace="">
+    <element href="platform:/resource/02-12-24-VALIDATION-TASK/Validator.xsd#//Root;XSDElementDeclaration" name="Root"/>
+  </XSDCollection>
+</MessageBroker>

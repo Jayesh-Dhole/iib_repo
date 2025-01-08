@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <input path="/format.xsd"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var1"/>
+    <output derivedFrom="MB:JSON_schema_in_json_file" path="/jsonsc.schema.json" var="var"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="XML_TO_JSON_BOTH_SCHEMA_Mapping">
+        <input path="mb:msg(InputData,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_InputData"/>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var1/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON">
+            <cast derivedFrom="MB:JSON_TYPE" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}jsonsc.schema_JsonType" ref="var"/>
+        </output>
+        <move>
+            <input path="$ComIbmMessageAssembly_InputData/Properties"/>
+            <output path="$ComIbmMessageAssembly_JSON/Properties"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_InputData/InputData/Name"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/InputData/Name"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_InputData/InputData/Id"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/InputData/Id"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_InputData/InputData/Date"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/InputData/Date"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_InputData/InputData/Status"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/InputData/status"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

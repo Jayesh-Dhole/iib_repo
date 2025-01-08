@@ -1,0 +1,44 @@
+2024-08-06 12:35:49.973000Z: [Thread 11068] (Msg 1/1) BIP1990I: Integration server 'TEST_SERVER1' starting initialization; version '12.0.12.0' (64-bit) 
+2024-08-06 12:35:49.990960Z: [Thread 11068] (Msg 1/1) BIP9905I: Initializing resource managers. 
+2024-08-06 12:35:51.686456Z: [Thread 11068] (Msg 1/1) BIP10112I: The resources from 'mqsicdc.par' have not been loaded because the runtime component 'ChangeDataCapture' has not been enabled. Reason: 'Restricted by Java Runtime selected'. Further detail: 'C:\Program Files\IBM\ACE\12.0.12.0\common\jdk\jre\embedded.java.yaml'. 
+2024-08-06 12:35:51.933248Z: [Thread 11068] (Msg 1/1) BIP10112I: The resources from 'imbopentelemetry.lil' have not been loaded because the runtime component 'OpenTelemetry' has not been enabled. Reason: 'Integration Server Configuration'. Further detail: 'server.conf.yaml'. 
+2024-08-06 12:35:53.729516Z: [Thread 11068] (Msg 1/1) BIP9906I: Reading deployed resources. 
+2024-08-06 12:35:54.048804Z: [Thread 7972] (Msg 1/1) BIP2866I: IBM App Connect Enterprise administration security is inactive. 
+2024-08-06 12:35:54.060236Z: [Thread 7972] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7601' for 'RestAdmin http' connections. 
+2024-08-06 12:35:54.525132Z: [Thread 11068] (Msg 1/1) BIP1991I: Integration server has finished initialization. 
+2024-08-06 12:36:06.004610Z: [Thread 3752] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-08-06 12:36:06.083769Z: [Thread 3752] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:36:06.231193Z: [Thread 3752] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:36:06.231505Z: [Thread 3752] (Msg 1/1) BIP2269I: Deployed resource 'Flow1' (uuid='Flow1',type='MessageFlow') started successfully. 
+2024-08-06 12:36:06.231577Z: [Thread 3752] (Msg 1/1) BIP9332I: Application 'App1' has been created successfully. 
+2024-08-06 12:36:06.231616Z: [Thread 3752] (Msg 1/1) BIP9326I: The source 'App1project.generated.bar' has been successfully deployed. 
+2024-08-06 12:36:06.231914Z: [Thread 3752] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-08-06 12:38:55.856432Z: [Thread 4520] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-08-06 12:38:55.870824Z: [Thread 4520] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:39:00.279389Z: [Thread 4520] (Msg 1/1) BIP2271I: Deployed resource 'Flow1' (uuid='Flow1',type='MessageFlow') successfully stopped. 
+2024-08-06 12:39:00.279749Z: [Thread 4520] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:39:00.320134Z: [Thread 4520] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:39:00.339863Z: [Thread 4520] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:39:00.340181Z: [Thread 4520] (Msg 1/1) BIP2269I: Deployed resource 'Flow1' (uuid='Flow1',type='MessageFlow') started successfully. 
+2024-08-06 12:39:00.340252Z: [Thread 4520] (Msg 1/1) BIP9332I: Application 'App1' has been changed successfully. 
+2024-08-06 12:39:00.340313Z: [Thread 4520] (Msg 1/1) BIP9326I: The source 'App1project.generated.bar' has been successfully deployed. 
+2024-08-06 12:39:00.340597Z: [Thread 4520] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-08-06 12:40:48.631140Z: [Thread 3752] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-08-06 12:40:48.654196Z: [Thread 3752] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:40:52.966332Z: [Thread 3752] (Msg 1/1) BIP2271I: Deployed resource 'Flow1' (uuid='Flow1',type='MessageFlow') successfully stopped. 
+2024-08-06 12:40:52.966728Z: [Thread 3752] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:40:52.997160Z: [Thread 3752] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:40:53.014760Z: [Thread 3752] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:40:53.015100Z: [Thread 3752] (Msg 1/1) BIP2269I: Deployed resource 'Flow1' (uuid='Flow1',type='MessageFlow') started successfully. 
+2024-08-06 12:40:53.015152Z: [Thread 3752] (Msg 1/1) BIP9332I: Application 'App1' has been changed successfully. 
+2024-08-06 12:40:53.015188Z: [Thread 3752] (Msg 1/1) BIP9326I: The source 'App1project.generated.bar' has been successfully deployed. 
+2024-08-06 12:40:53.015452Z: [Thread 3752] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-08-06 12:41:32.011792Z: [Thread 7876] (Msg 1/2) BIP2628W: Exception condition detected on input node 'Flow1.MQ Input'. 
+2024-08-06 12:41:32.011906Z: [Thread 7876] (Msg 2/2) BIP2680E: Failed to setup a MQ control callback for component 'Flow1.MQ Input' to queue 'Input1' on queue manager 'Manager1': MQCC=2; MQRC=2161. 
+2024-08-06 12:41:39.506440Z: [Thread 9388] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:41:40.700368Z: [Thread 9388] (Msg 1/1) BIP2271I: Deployed resource 'Flow1' (uuid='Flow1',type='MessageFlow') successfully stopped. 
+2024-08-06 12:41:40.700716Z: [Thread 9388] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'App1' of type 'Application'. 
+2024-08-06 12:41:40.723776Z: [Thread 9388] (Msg 1/1) BIP9521I: Application 'App1' has been deleted. 
+2024-08-06 12:41:44.884500Z: [Thread 8268] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-08-06 12:41:44.884548Z: [Thread 8268] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-08-06 12:41:44.889972Z: [Thread 8268] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 

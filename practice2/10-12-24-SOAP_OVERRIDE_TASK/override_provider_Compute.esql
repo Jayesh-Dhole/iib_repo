@@ -1,0 +1,13 @@
+DECLARE ns NAMESPACE 'http://www.example.org/override_wsdl/';
+CREATE COMPUTE MODULE override_provider_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		 CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+--		SET OutputRoot = InputRoot;
+      SET OutputRoot.SOAP.Body.ns:NewOperationResponse.out = InputRoot.SOAP.Body.ns:NewOperation.a + InputRoot.SOAP.Body.ns:NewOperation.b; 
+	END;
+END MODULE;

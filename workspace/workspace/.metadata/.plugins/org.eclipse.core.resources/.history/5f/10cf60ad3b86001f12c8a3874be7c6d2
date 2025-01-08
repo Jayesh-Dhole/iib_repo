@@ -1,0 +1,30 @@
+
+
+CREATE COMPUTE MODULE TASK_4_LOOP_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inref REFERENCE TO InputRoot.XMLNSC.breakfast_menu[1];
+		DECLARE i INTEGER 1 ;
+		   FOR inref AS InputRoot.XMLNSC.breakfast_menu.food DO
+		   	 SET OutputRoot.JSON.Data.breakfast_menu.food.name[i] = inref.food.name;
+ 		   	 SET OutputRoot.JSON.Data.breakfast_menu.food.price[i] = inref.food.price;
+ 		   	 SET OutputRoot.JSON.Data.breakfast_menu.food.description[i] = inref.food.description;		
+		   END FOR;   	 
+	END;
+END MODULE;

@@ -1,0 +1,54 @@
+
+
+CREATE COMPUTE MODULE TASK_2_HARDCODE_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		CREATE FIELD OutputRoot.JSON.Data;
+		DECLARE inref REFERENCE TO OutputRoot.JSON.Data; 
+		SET inref = Outputroot.JSON.Data;
+		
+        SET inref.statusCode = 200;
+        SET inref.message = "Operation performed successfully";
+	        SET inref.data.customerid = 0;
+	        SET inref.data.name = "string";
+	        SET inref.shortName = "string";
+	        SET inref.gender = "string";
+	        SET inref.segment = 0 ;
+	        SET inref.language = 0 ;
+	        SET inref.nationality = "string";
+	        SET inref.nuit = "string";
+	        SET inref.branchCode = "string" ;
+	        SET inref.status = 0 ;
+	        SET inref.id = 0 ;
+	   		     SET inref.id.type = 0 ;
+	   		     SET inref.id.number = "string" ;
+			        SET inref.officer.code = 0 ;	
+			        SET inref.officer.name = "string" ;
+			        SET inref.officer.mobile = "string" ;
+			        SET inref.officer.email = "string" ;
+		    SET inref.contact.email =  0;
+		     SET inref.contact.phone =  "string";
+		      SET inref.contact.altPhone =  "string";
+		       SET inref.contact.notifications =  "string";
+		        SET inref.contact.fax =  "string";
+		   SET inref.residence.address =  "Lorem Ipsum, 404 street 62";     
+		   SET inref.residence.province =  "Maputo";     
+		   SET inref.residence.country =  "MZ"; 
+	END;
+END MODULE;

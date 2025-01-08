@@ -1,0 +1,27 @@
+CREATE COMPUTE MODULE database_mf_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		
+		DECLARE Inref REFERENCE TO InputRoot.JSON.Data;
+		
+		DECLARE InputDataBlob BLOB;
+		DECLARE InputDataChar CHARACTER;
+		
+		
+		SET InputDataBlob = ASBITSTREAM(Inref);
+		SET InputDataChar = CAST(InputDataBlob as CHARACTER CCSID InputRoot.Properties.CodedCharSetId ENCODING InputRoot.Properties.Encoding);
+		
+		DECLARE AppName CHARACTER 'Logging_DatabaseLogging';
+		DECLARE MsgFlowName CHARACTER 'database_mf';
+		DECLARE LogType CHARACTER 'Channel Request';
+		
+		CALL InsertLogs(AppName,MsgFlowName,LogType,InputDataChar);
+		
+		SET OutputRoot.JSON.Data = InputRoot.XMLNSC;
+	END;
+END MODULE;

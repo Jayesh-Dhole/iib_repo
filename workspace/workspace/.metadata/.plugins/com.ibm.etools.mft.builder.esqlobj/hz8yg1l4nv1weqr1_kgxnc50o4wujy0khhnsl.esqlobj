@@ -1,0 +1,39 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE empId INTEGER;  -- Variable to hold employee ID
+
+
+-- Retrieve the employee ID from the incoming JSON data
+	SET empId = CAST(InputRoot.JSON.Data.empId AS INTEGER);
+
+-- Assuming you have a function to connect to MongoDB and retrieve the employee data.
+-- This is a pseudo-function call, and you need to replace it with your actual MongoDB retrieval logic.
+SET employeeRecord = RetrieveEmployeeFromMongoDB(empId);
+
+-- Check if the employee record is found
+IF employeeRecord IS NOT NULL THEN
+    -- Successfully retrieved employee data
+    SET OutputLocalEnvironment.Destination.LoopBack.Request.Object = employeeRecord;
+ELSE
+    -- Handle case where employee is not found
+    SET OutputLocalEnvironment.Destination.LoopBack.Request.Object = 
+        CAST('{ "error": "Employee not found" }' AS CHARACTER);
+END IF;
+
+	END;

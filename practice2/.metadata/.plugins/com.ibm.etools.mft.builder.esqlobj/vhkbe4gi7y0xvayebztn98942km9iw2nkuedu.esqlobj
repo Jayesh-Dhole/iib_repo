@@ -1,0 +1,4 @@
+CREATE PROCEDURE AddIntegers(IN num1 INTEGER, IN num2 INTEGER, OUT result INTEGER)
+BEGIN
+    SET result = num1 + num2;
+END;

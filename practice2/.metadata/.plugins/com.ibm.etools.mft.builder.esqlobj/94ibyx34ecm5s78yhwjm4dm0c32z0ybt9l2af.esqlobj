@@ -1,0 +1,7 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE stmt CHARACTER;
+		SET stmt = 'CREATE TABLE Person11(name varchar2(20),age number)';
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;

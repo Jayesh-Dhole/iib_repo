@@ -1,0 +1,33 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : " REST_05_12_24_SWAGGER",
+    "version" : "1.0.0",
+    "description" : " REST_05_12_24_SWAGGER"
+  },
+  "paths" : {
+    "/path2" : {
+      "post" : {
+        "operationId" : "postPath2",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful."
+          }
+        },
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "description" : "Insert a path2",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "schema" : {
+            "type" : "boolean"
+          },
+          "description" : "The request body for the operation",
+          "required" : true
+        } ]
+      }
+    }
+  },
+  "basePath" : "/rest_05_12_24_swagger/v1"
+}

@@ -1,0 +1,4 @@
+CREATE COMPUTE MODULE BLOB_TO_JSON_Compute
+	
+		-- CALL CopyEntireMessage();
+		RETURN TRUE;

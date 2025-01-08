@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <inlinedXMLSchema>
+        <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+       
+  <xsd:element name="status" nillable="true" type="xsd:string"/> 
+       
+  <xsd:element name="Date" nillable="true" type="xsd:string"/> 
+       
+  <xsd:element name="Id" nillable="true" type="xsd:string"/> 
+       
+  <xsd:element name="Name" nillable="true" type="xsd:string"/> 
+   
+</xsd:schema> 
+]]>
+    </inlinedXMLSchema>
+    <input path="/format.xsd" var="var2"/>
+    <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var1"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="MAPPING_NODE_FLOW_Mapping">
+        <input path="$var2/mb:msg(InputData,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_InputData"/>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties)" var="ComIbmMessageAssembly_JSON">
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="Name" ref="var1"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="Id" ref="var1"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="Date" ref="var1"/>
+            <cast castType="userDefined" path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/any" qualifier="status" ref="var1"/>
+        </output>
+        <move>
+            <input path="$ComIbmMessageAssembly_InputData/Properties"/>
+            <output path="$ComIbmMessageAssembly_JSON/Properties"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_InputData/InputData/Name"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/Name"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_InputData/InputData/Id"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/Id"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_InputData/InputData/Date"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/Date"/>
+        </move>
+        <move automap="true">
+            <input path="$ComIbmMessageAssembly_InputData/InputData/Status"/>
+            <output path="$ComIbmMessageAssembly_JSON/JSON/spath('Data',2)/status"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

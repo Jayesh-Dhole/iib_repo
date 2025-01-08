@@ -1,0 +1,36 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- CREATE Operation
+		/* 
+		DECLARE stmt CHARACTER;
+		SET stmt = 'CREATE TABLE Person11(name varchar2(20),age number)';
+		PASSTHRU(stmt);
+		RETURN TRUE;
+		*/
+		
+		-- INSERT OPARATION 
+		/*
+		DECLARE stmt CHARACTER;
+		SET stmt = 'INSERT INTO Person11 VALUES(''adesh'',22)';
+		PASSTHRU(stmt);
+		
+		SET stmt = 'INSERT INTO Person11 VALUES(''aadit'',21)';
+		PASSTHRU(stmt);
+		
+		SET stmt = 'INSERT INTO Person11 VALUES(''mayur'',23)';
+		PASSTHRU(stmt);
+		
+		
+		SET stmt = 'INSERT INTO Person11 VALUES(''Lokesh'',24)';
+		PASSTHRU(stmt);
+		*/
+		
+		-- READ Operation
+		/*
+		SET OutputRoot.JSON.Data.PersonDetails[] = (SELECT * FROM Database.Person11);
+		*/
+		
+		-- UPDATE Operation
+		DECLARE stmt CHARACTER;
+		SET stmt = '(UPDATE Person SET age = 50 where name = ''Lokesh'')';
+	END;

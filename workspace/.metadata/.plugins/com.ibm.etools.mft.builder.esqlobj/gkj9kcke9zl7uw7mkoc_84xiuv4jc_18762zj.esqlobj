@@ -1,0 +1,10 @@
+CREATE COMPUTE MODULE stored_procedure_mf_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE var REFERENCE TO InputRoot.XMLNSC.STD;
+		call Insertion(var.ID,var.marks,var.name);
+		RETURN TRUE;
+	END;
+
+	
+END MODULE;

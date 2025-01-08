@@ -1,0 +1,16 @@
+CREATE COMPUTE MODULE STORED_PROCEDURES_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;  
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		          DECLARE in1 REFERENCE TO InputRoot.XMLNSC.Proc;
+		
+		call Insertion(in1.ID,in1.NAME,in1.SALARY,in1.AGE);
+		DECLARE i INTEGER;
+		SET i = in1.ID;
+		                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	END;
+END MODULE;

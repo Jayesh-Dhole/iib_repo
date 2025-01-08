@@ -1,0 +1,20 @@
+CREATE COMPUTE MODULE EXCEPTION_HANDLING_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- SET OutputRoot.XMLNSC.Exception = InputExceptionList.*[1];
+		DECLARE inref REFERENCE TO InputExceptionList.*[1];
+		DECLARE Number, Line, Text CHARACTER;
+		WHILE LASTMOVE (inref) Do
+			MOVE inref LASTCHILD;
+			IF inref.Number IS NOT NULL THEN
+				SET Number = inref.Number;
+				SET Line = inref.Line;
+				SET Text = inref.Text;
+			END IF;
+			SET OutputRoot.XMLNSC.ExceptionNUM = Number;
+		SET OutputRoot.XMLNSC.ExceptionLine = Line;
+		SET OutputRoot.XMLNSC.ExceptionText = Text;
+		END WHILE;	
+		
+			END;
+		END MODULE;

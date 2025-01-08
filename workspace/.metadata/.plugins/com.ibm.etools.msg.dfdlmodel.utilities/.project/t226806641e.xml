@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="File_Delimited">
+  <XSDCollection href="platform:/resource/File_Delimited/dfdl1.xsd" prefix="" targetNamespace="">
+    <import name="IBMdefined/CommaSeparatedFormat.xsd" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
+    <element href="platform:/resource/File_Delimited/dfdl1.xsd#//dfdl1;XSDElementDeclaration" name="dfdl1"/>
+  </XSDCollection>
+</MessageBroker>

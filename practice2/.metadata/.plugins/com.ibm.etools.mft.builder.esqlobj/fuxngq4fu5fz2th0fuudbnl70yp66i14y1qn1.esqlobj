@@ -1,0 +1,32 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE test1 REFERENCE TO InputRoot.XMLNSC.Name;
+		-- DECLARE test1 REFERENCE TO InputRoot.XMLNSC.Address; 					 created for coalesce function
+		-- SET OutputRoot.JSON.Data.Result = OVERLAY(test1 PLACING '123' from 2);    OVERLAY FUNCTION
+		-- SET OutputRoot.JSON.Data.Result = SUBSTRING(test1 from 4 for 3);			 SUBSTRING FUNCTION
+		-- SET OutputRoot.JSON.Data.Result = REPLACE(test1,'and','vs');				 REPLACE FUNCTION
+		-- SET OutputRoot.JSON.Data.Result = TRANSLATE(test1,'a','*');				 TRANSLATE FUNCTION
+		-- SET OutputRoot.JSON.Data.Result = REPLICATE(test1,3);					 REPLICATE FUNCTION
+		-- SET OutputRoot.JSON.Data.Result = COALESCE(test1,'eidiko');
+		-- SET OutputRoot.JSON.Data.Result = CONTAINS(test1,'k');					 CONTAINS FUNCTION
+		-- SET OutputRoot.JSON.Data.Result = STARTSWITH(test1,'a');					 STARTSWITH FUNCTION
+		-- SET OutputRoot.JSON.Data.Result = ENDSWITH(test1,'h');					 ENDSWITH FUNCTION
+		SET OutputRoot.JSON.Data.Result = LENGTH(test1);
+		
+	END;

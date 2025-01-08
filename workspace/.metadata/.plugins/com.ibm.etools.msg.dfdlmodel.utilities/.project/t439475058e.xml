@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="29-11-2024-MAPPING-NODE-TASK">
+  <XSDCollection href="platform:/resource/29-11-2024-MAPPING-NODE-TASK/format.xsd" prefix="" targetNamespace="">
+    <element href="platform:/resource/29-11-2024-MAPPING-NODE-TASK/format.xsd#//InputData;XSDElementDeclaration" name="InputData"/>
+  </XSDCollection>
+</MessageBroker>

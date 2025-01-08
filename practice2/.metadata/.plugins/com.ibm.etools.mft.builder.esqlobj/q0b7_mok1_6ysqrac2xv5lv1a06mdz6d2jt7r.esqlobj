@@ -1,0 +1,14 @@
+CREATE COMPUTE MODULE ROUTE_TO_LABEL_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE var REFERENCE TO InputRoot.XMLNSC;
+		SET OutputRoot = InputRoot;
+        SET OutputLocalEnvironment.Destination.Routerlist.DestinationData[1].LabelName = 'label1';
+        
+	END;
+END MODULE;

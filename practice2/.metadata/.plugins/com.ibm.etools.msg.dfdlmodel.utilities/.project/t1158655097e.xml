@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="21-10-24-RCD-TASK">
+  <XSDCollection href="platform:/resource/21-10-24-RCD-TASK/IBMdefined/RecordSeparatedFieldFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/RecordSeparatedFieldFormat"/>
+  <XSDCollection href="platform:/resource/21-10-24-RCD-TASK/dfdl.xsd" prefix="" targetNamespace="">
+    <import name="IBMdefined/RecordSeparatedFieldFormat.xsd" targetNamespace="http://www.ibm.com/dfdl/RecordSeparatedFieldFormat"/>
+    <element href="platform:/resource/21-10-24-RCD-TASK/dfdl.xsd#//dfdl;XSDElementDeclaration" name="dfdl"/>
+  </XSDCollection>
+</MessageBroker>

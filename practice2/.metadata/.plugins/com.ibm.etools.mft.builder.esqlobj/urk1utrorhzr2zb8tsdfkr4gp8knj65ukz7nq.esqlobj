@@ -1,0 +1,52 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+    BEGIN
+        CALL CopyMessageHeaders();  -- Copy headers from input to output
+        CALL CopyEntireMessage();    -- Process the message to get employee data
+        RETURN TRUE;
+    END;
+
+    -- Procedure to copy message headers
+    CREATE PROCEDURE CopyMessageHeaders() 
+    BEGIN
+        DECLARE I INTEGER 1;
+        DECLARE J INTEGER;
+        SET J = CARDINALITY(InputRoot.*[]);  -- Get number of headers
+        WHILE I <= J DO  -- Copy headers
+            SET OutputRoot.*[I] = InputRoot.*[I];
+            SET I = I + 1;
+        END WHILE;
+    END;
+
+    -- Procedure to copy the entire message and fetch employee data
+    CREATE PROCEDURE CopyEntireMessage() 
+    BEGIN
+        DECLARE empId CHARACTER;  -- Variable to hold employee ID
+        DECLARE employeeRecord REFERENCE TO OutputLocalEnvironment.Destination.LoopBack.Request.Object;
+
+        -- Retrieve the employee ID from the incoming JSON data
+        SET empId = CAST(InputRoot.JSON.Data.empId AS CHARACTER);
+
+        -- Call the function to retrieve employee data from MongoDB
+        SET employeeRecord = RetrieveEmployeeFromMongoDB(empId);
+
+        -- Check if the employee record is found
+        IF employeeRecord IS NOT NULL THEN
+            -- Successfully retrieved employee data
+            SET OutputLocalEnvironment.Destination.LoopBack.Request.Object = employeeRecord;
+        ELSE
+            -- Handle case where employee is not found
+            SET OutputLocalEnvironment.Destination.LoopBack.Request.Object = 
+                CAST('{ "error": "Employee not found" }' AS CHARACTER);
+        END IF;
+
+    END;
+
+    -- Function to retrieve employee data from MongoDB
+    CREATE FUNCTION RetrieveEmployeeFromMongoDB(empId CHARACTER) RETURNS REFERENCE
+    BEGIN
+        DECLARE employee REFERENCE;
+
+        -- MongoDB query logic; adapt this to your actual MongoDB connector setup
+        SET employee = (SELECT * FROM MongoDB.EMP WHERE empId = empId); -- Change Employee to your collection name
+
+        RETURN employee;

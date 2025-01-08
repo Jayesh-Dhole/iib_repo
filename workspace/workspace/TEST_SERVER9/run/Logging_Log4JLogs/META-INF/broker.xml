@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Broker deployBarfile="C:\Users\Sreenivas Bandaru\IBM\ACET12\workspace\GeneratedBarFiles\Logging_Log4JLogsproject.generated.bar" deployTimestamp="2024-09-05 16:42:23">
+  <CompiledApplication>
+    <ConfigurableProperty uri="startMode">
+    </ConfigurableProperty>
+  </CompiledApplication>
+  <CompiledMessageFlow name="log4j2" deployBarfile="C:\Users\Sreenivas Bandaru\IBM\ACET12\workspace\GeneratedBarFiles\Logging_Log4JLogsproject.generated.bar" deployTimestamp="2024-09-05 16:42:23">
+    <ConfigurableProperty uri="log4j2#Compute.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#Compute.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#Compute.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#HTTP Input.URLSpecifier" override="/path1">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#HTTP Input.decompressInputMessage">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#HTTP Input.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#HTTP Input.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#HTTP Input.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#HTTP Input.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#HTTP Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#HTTP Reply.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="log4j2#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+</Broker>

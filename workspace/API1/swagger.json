@@ -1,0 +1,27 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "API1",
+    "version" : "1.0.0",
+    "description" : "API1"
+  },
+  "paths" : {
+    "/get" : {
+      "get" : {
+        "operationId" : "getGet",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve get",
+        "parameters" : [ ]
+      }
+    }
+  },
+  "basePath" : "/api1/v1"
+}

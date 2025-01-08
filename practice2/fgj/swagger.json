@@ -1,0 +1,26 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "fgj",
+    "version" : "1.0.0",
+    "description" : "fgj"
+  },
+  "paths" : {
+    "/xhcjkl;d" : {
+      "get" : {
+        "operationId" : "getXhcjkl;d",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve xhcjkl;d"
+      }
+    }
+  },
+  "basePath" : "/fgj/v1"
+}

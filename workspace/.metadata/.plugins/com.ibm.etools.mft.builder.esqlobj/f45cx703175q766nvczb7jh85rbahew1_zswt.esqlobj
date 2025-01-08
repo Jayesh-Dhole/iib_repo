@@ -1,0 +1,12 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE var REFERENCE TO Root.XMLNSC.Name;
+        IF var = 'Jayesh' THEN
+            RETURN TRUE;
+        ELSEIF var = 'Jay' THEN
+            RETURN FALSE;
+        ELSE
+            RETURN UNKNOWN;
+		END IF;
+		RETURN TRUE;
+	END;

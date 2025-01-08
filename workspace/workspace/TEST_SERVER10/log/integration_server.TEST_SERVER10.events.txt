@@ -1,0 +1,64 @@
+2024-09-03 21:04:03.107503Z: [Thread 17368] (Msg 1/1) BIP1990I: Integration server 'TEST_SERVER10' starting initialization; version '12.0.12.0' (64-bit) 
+2024-09-03 21:04:03.124230Z: [Thread 17368] (Msg 1/1) BIP9905I: Initializing resource managers. 
+2024-09-03 21:04:05.003386Z: [Thread 17368] (Msg 1/1) BIP10112I: The resources from 'mqsicdc.par' have not been loaded because the runtime component 'ChangeDataCapture' has not been enabled. Reason: 'Restricted by Java Runtime selected'. Further detail: 'C:\Program Files\IBM\ACE\12.0.12.0\common\jdk\jre\embedded.java.yaml'. 
+2024-09-03 21:04:05.331923Z: [Thread 17368] (Msg 1/1) BIP10112I: The resources from 'imbopentelemetry.lil' have not been loaded because the runtime component 'OpenTelemetry' has not been enabled. Reason: 'Integration Server Configuration'. Further detail: 'server.conf.yaml'. 
+2024-09-03 21:04:07.333068Z: [Thread 17368] (Msg 1/1) BIP9906I: Reading deployed resources. 
+2024-09-03 21:04:07.766480Z: [Thread 19136] (Msg 1/1) BIP2866I: IBM App Connect Enterprise administration security is inactive. 
+2024-09-03 21:04:07.778803Z: [Thread 19136] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7600' for 'RestAdmin http' connections. 
+2024-09-03 21:04:07.779765Z: [Thread 17368] (Msg 1/1) BIP1991I: Integration server has finished initialization. 
+2024-09-03 21:04:26.323512Z: [Thread 16864] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-03 21:04:26.354006Z: [Thread 16864] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'ErrorHandling_LogNode' of type 'Application'. 
+2024-09-03 21:04:34.049812Z: [Thread 16864] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'ErrorHandling_LogNode' of type 'Application'. 
+2024-09-03 21:04:34.066380Z: [Thread 16864] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-03 21:04:34.066428Z: [Thread 16864] (Msg 1/1) BIP1996I: Listening on HTTP URL '/log'. 
+2024-09-03 21:04:34.066576Z: [Thread 16864] (Msg 1/1) BIP2269I: Deployed resource 'Log_mf' (uuid='Log_mf',type='MessageFlow') started successfully. 
+2024-09-03 21:04:34.066628Z: [Thread 16864] (Msg 1/1) BIP9332I: Application 'ErrorHandling_LogNode' has been created successfully. 
+2024-09-03 21:04:34.066664Z: [Thread 16864] (Msg 1/1) BIP9326I: The source 'ErrorHandling_LogNodeproject.generated.bar' has been successfully deployed. 
+2024-09-03 21:04:34.066884Z: [Thread 16864] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-03 22:30:06.031618Z: [Thread 16864] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-03 22:30:06.035225Z: [Thread 16864] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-03 22:30:06.040487Z: [Thread 16864] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'ErrorHandling_LogNode' of type 'Application'. 
+2024-09-03 22:30:10.100830Z: [Thread 16864] (Msg 1/1) BIP2271I: Deployed resource 'Log_mf' (uuid='Log_mf',type='MessageFlow') successfully stopped. 
+2024-09-03 22:30:10.101126Z: [Thread 16864] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'ErrorHandling_LogNode' of type 'Application'. 
+2024-09-03 22:30:10.113801Z: [Thread 16864] (Msg 1/1) BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-03 22:30:10.328947Z: [Thread 16864] (Msg 1/1) BIP9521I: Application 'ErrorHandling_LogNode' has been deleted. 
+2024-09-03 22:30:10.352160Z: [Thread 16864] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-03 23:06:05.915755Z: [Thread 12416] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-03 23:06:06.054746Z: [Thread 12416] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-03 23:06:06.149728Z: [Thread 12416] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-03 23:06:06.165125Z: [Thread 12416] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-03 23:06:06.165698Z: [Thread 12416] (Msg 1/1) BIP1996I: Listening on HTTP URL '/eventlog'. 
+2024-09-03 23:06:06.166889Z: [Thread 12416] (Msg 1/1) BIP2269I: Deployed resource 'EventLog_mf' (uuid='EventLog_mf',type='MessageFlow') started successfully. 
+2024-09-03 23:06:06.167346Z: [Thread 12416] (Msg 1/1) BIP9332I: Application 'Logging_EventLogging' has been created successfully. 
+2024-09-03 23:06:06.168270Z: [Thread 12416] (Msg 1/1) BIP9326I: The source 'Logging_EventLoggingproject.generated.bar' has been successfully deployed. 
+2024-09-03 23:06:06.168608Z: [Thread 12416] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-03 23:18:20.396594Z: [Thread 14188] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-03 23:18:20.396666Z: [Thread 14188] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-03 23:18:20.397238Z: [Thread 14188] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-03 23:18:23.392844Z: [Thread 14188] (Msg 1/1) BIP2271I: Deployed resource 'EventLog_mf' (uuid='EventLog_mf',type='MessageFlow') successfully stopped. 
+2024-09-03 23:18:23.392972Z: [Thread 14188] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-03 23:18:23.400608Z: [Thread 14188] (Msg 1/1) BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-03 23:18:23.418406Z: [Thread 14188] (Msg 1/1) BIP9521I: Application 'Logging_EventLogging' has been deleted. 
+2024-09-03 23:18:23.420014Z: [Thread 14188] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-03 23:23:20.934604Z: [Thread 8948] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-03 23:23:20.963396Z: [Thread 8948] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-03 23:23:21.017514Z: [Thread 8948] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-03 23:23:21.031750Z: [Thread 8948] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-03 23:23:21.031844Z: [Thread 8948] (Msg 1/1) BIP1996I: Listening on HTTP URL '/eventlog'. 
+2024-09-03 23:23:21.032086Z: [Thread 8948] (Msg 1/1) BIP2269I: Deployed resource 'EventLog_mf' (uuid='EventLog_mf',type='MessageFlow') started successfully. 
+2024-09-03 23:23:21.032222Z: [Thread 8948] (Msg 1/1) BIP9332I: Application 'Logging_EventLogging' has been created successfully. 
+2024-09-03 23:23:21.032300Z: [Thread 8948] (Msg 1/1) BIP9326I: The source 'Logging_EventLoggingproject.generated.bar' has been successfully deployed. 
+2024-09-03 23:23:21.032572Z: [Thread 8948] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-03 23:23:55.678008Z: [Thread 19752] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-03 23:23:55.757524Z: [Thread 19752] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-03 23:23:57.049612Z: [Thread 19752] (Msg 1/1) BIP2271I: Deployed resource 'EventLog_mf' (uuid='EventLog_mf',type='MessageFlow') successfully stopped. 
+2024-09-03 23:23:57.049784Z: [Thread 19752] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-03 23:23:57.064448Z: [Thread 19752] (Msg 1/1) BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-03 23:23:57.089600Z: [Thread 19752] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-03 23:23:57.121672Z: [Thread 19752] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'Logging_EventLogging' of type 'Application'. 
+2024-09-03 23:23:57.142664Z: [Thread 19752] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-03 23:23:57.142912Z: [Thread 19752] (Msg 1/1) BIP1996I: Listening on HTTP URL '/eventlog'. 
+2024-09-03 23:23:57.144432Z: [Thread 19752] (Msg 1/1) BIP2269I: Deployed resource 'EventLog_mf' (uuid='EventLog_mf',type='MessageFlow') started successfully. 
+2024-09-03 23:23:57.144576Z: [Thread 19752] (Msg 1/1) BIP9332I: Application 'Logging_EventLogging' has been changed successfully. 
+2024-09-03 23:23:57.144644Z: [Thread 19752] (Msg 1/1) BIP9326I: The source 'Logging_EventLoggingproject.generated.bar' has been successfully deployed. 
+2024-09-03 23:23:57.144952Z: [Thread 19752] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 

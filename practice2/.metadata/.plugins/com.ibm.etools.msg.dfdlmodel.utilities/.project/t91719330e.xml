@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="File_FixedLength">
+  <XSDCollection href="platform:/resource/File_FixedLength1/IBMdefined/RecordFixLengthFieldFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/RecordFixLengthFieldFormat"/>
+  <XSDCollection href="platform:/resource/File_FixedLength1/Fixed_length.xsd" prefix="" targetNamespace="">
+    <import name="IBMdefined/RecordFixLengthFieldFormat.xsd" targetNamespace="http://www.ibm.com/dfdl/RecordFixLengthFieldFormat"/>
+    <element href="platform:/resource/File_FixedLength1/Fixed_length.xsd#//Fixed_length;XSDElementDeclaration" name="Fixed_length"/>
+  </XSDCollection>
+</MessageBroker>

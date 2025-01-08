@@ -1,0 +1,9 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		
+		DECLARE inref REFERENCE TO Root.XMLNSC.Employee;
+		
+		
+		RETURN TRUE;
+	END;
+		

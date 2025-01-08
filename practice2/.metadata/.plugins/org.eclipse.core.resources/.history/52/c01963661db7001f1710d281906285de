@@ -1,0 +1,14 @@
+
+
+Importing file: C:\Users\Sreenivas Bandaru\IBM\ACET12\workspace\10-12-24-SOAP-OVERRIDE-TASK\wsdl_ovvr.wsdl
+
+The WSDL import will proceed with bindings wsdl_ovvrSOAP.
+Creating wsdl schema document for file:///C:/Users/Sreenivas Bandaru/IBM/ACET12/workspace/10-12-24-SOAP-OVERRIDE-TASK/wsdl_ovvr.wsdl.
+Parsing wsdl binding {http://www.example.org/wsdl_ovvr/}wsdl_ovvrSOAP.
+Parsing wsdl binding input NewOperation.
+Parsing wsdl binding output NewOperation.
+Processing doc style for operation NewOperation.
+Populating WSDL schema wsdl_ovvr.xsd.
+Creating file wsdl_ovvr.xsd in the workspace.
+Creating file wsdl_ovvr_InlineSchema1.xsd in the workspace.
+Copying source WSDL wsdl_ovvr.wsdl to wsdl_ovvr.wsdl.

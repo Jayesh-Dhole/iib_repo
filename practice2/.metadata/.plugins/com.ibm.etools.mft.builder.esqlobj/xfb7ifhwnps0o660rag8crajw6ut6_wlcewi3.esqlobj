@@ -1,0 +1,6 @@
+CREATE FUNCTION MultiplyIntegers(IN num1 INTEGER, IN num2 INTEGER) RETURNS INTEGER
+BEGIN
+    DECLARE result INTEGER;
+    SET result = num1 * num2;
+    RETURN result;
+END;

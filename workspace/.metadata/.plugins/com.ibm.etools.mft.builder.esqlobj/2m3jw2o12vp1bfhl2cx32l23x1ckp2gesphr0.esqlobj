@@ -1,0 +1,7 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		CALL SelectMultipleData(Environment.Result1[],Environment.Result2[]);
+		RETURN TRUE;
+	END;
+
+	

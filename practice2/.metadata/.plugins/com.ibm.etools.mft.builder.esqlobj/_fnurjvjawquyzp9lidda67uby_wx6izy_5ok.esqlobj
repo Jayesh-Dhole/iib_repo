@@ -1,0 +1,8 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE inref REFERENCE TO Root.JSON.Data.Employee;
+		
+		INSERT INTO database.system.DATA_INSERT_TABLE (ID, NAME, ADDRESS ) VALUES (inref.ID, inref.Name, inref.Address);
+		RETURN TRUE;
+	END;
+

@@ -1,0 +1,13 @@
+
+
+CREATE DATABASE MODULE database_input_node_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		DECLARE inref REFERENCE TO Root.XMLNSC.Employee;
+		
+		
+		RETURN TRUE;
+	END;
+		
+END MODULE;

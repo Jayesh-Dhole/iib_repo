@@ -1,0 +1,38 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inputRecords REFERENCE TO InputRoot.XMLNSC.Records.Record; -- Reference to the records in the input
+DECLARE outputRecord REFERENCE TO OutputRoot.XMLNSC.Record; 
+DECLARE outputFilePath CHARACTER 'C:\OutputFiles\Record'; -- Base path for output files
+DECLARE outputFileName CHARACTER ''; 
+DECLARE i INTEGER 1; -- Counter for file naming
+
+-- Loop through each record
+WHILE LASTCHILD(inputRecords) >= i DO
+    -- Get the current record
+    SET outputRecord = inputRecords[i];
+
+    -- Create a unique file name for each record
+    SET outputFileName = outputFilePath || CAST(i AS CHAR CCSID 1208) || '.xml'; 
+
+    -- Call the function to write the record to the output file
+    CALL WriteRecordToFile(outputRecord, outputFileName);
+    
+    SET i = i + 1;
+END WHILE;
+	END;

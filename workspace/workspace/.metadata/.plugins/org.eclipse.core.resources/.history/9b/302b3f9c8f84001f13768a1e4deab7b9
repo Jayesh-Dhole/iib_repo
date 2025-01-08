@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <inlinedXMLSchema>
+        <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+       
+  <xsd:element name="result" nillable="true" type="xsd:string"/> 
+       
+  <xsd:element name="EMP" nillable="true"> 
+    <xsd:complexType> 
+      <xsd:sequence> 
+        <xsd:element name="Name" nillable="true" type="xsd:string"/> 
+        <xsd:element name="Address" nillable="true" type="xsd:string"/> 
+      </xsd:sequence> 
+    </xsd:complexType> 
+  </xsd:element> 
+   
+</xsd:schema> 
+]]>
+    </inlinedXMLSchema>
+    <input path="jar:file://!com/ibm/msl/mapping/rdb/xsds/dbreturn.xsd" var="var3"/>
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <input inlinedXMLSchema="true" path="../schema_1.xsd" var="var1"/>
+    <output path="db:table(/xe.dbm,xe,SYSTEM,EMP)" var="EMP3"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var2"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="mfffff_Mapping">
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly">
+            <cast castType="userDefined" path="$MessageAssembly/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var" var="anyType"/>
+            <cast castType="userDefined" path="$MessageAssembly/JSON/spath('Data',2)/any" qualifier="EMP" ref="var1" var="any"/>
+        </input>
+        <output path="$EMP3/db:insert(fn:false(),NAME,ADDRESS)" var="dbinsert3"/>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var2/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly1">
+            <cast castType="userDefined" path="$MessageAssembly1/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}JSONObject" ref="var2" var="anyType1"/>
+            <cast castType="userDefined" path="$MessageAssembly1/JSON/spath('Data',2)/any" qualifier="result" ref="var1" var="any1"/>
+        </output>
+        <transaction>
+            <insert ref="dbinsert3">
+                <input path="$MessageAssembly/JSON/spath('Data',2)/EMP/Name" var="Name"/>
+                <input path="$MessageAssembly/JSON/spath('Data',2)/EMP/Address" var="Address"/>
+                <output path="$dbinsert3/."/>
+                <move>
+                    <input path="$Name/."/>
+                    <output path="NAME"/>
+                </move>
+                <move>
+                    <input path="$Address/."/>
+                    <output path="ADDRESS"/>
+                </move>
+            </insert>
+            <return>
+                <input path="$var3/DBInsertReturn"/>
+                <output path="$MessageAssembly1/JSON/spath('Data',2)/result"/>
+                <move>
+                    <input path="NumberOfRowsInserted"/>
+                    <output path="."/>
+                </move>
+            </return>
+        </transaction>
+        <move>
+            <input path="$MessageAssembly/Properties"/>
+            <output path="$MessageAssembly1/Properties"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

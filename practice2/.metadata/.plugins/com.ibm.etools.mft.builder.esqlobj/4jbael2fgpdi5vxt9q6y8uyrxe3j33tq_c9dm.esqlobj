@@ -1,0 +1,40 @@
+CREATE DATABASE MODULE Database_node_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	
+		--TO CREATE TABLE IN DATABASE NODE (WITH PASSTHRU) ----------------------------------------
+		 set var1 = 'CREATE TABLE ASampleTable4 (ID CHAR(10) NOT NULL, NAME CHAR(20) NOT NULL)';
+		 PASSTHRU(var1);	
+		
+		
+		--TO INSERT INTO TABLE IN DATABASE NODE (WITHOUT PASSTHRU)--------------------------------------
+		 DECLARE INREF REFERENCE TO Root.XMLNSC.Root;
+		 DECLARE var1, var2 CHARACTER;
+		 SET var1 = INREF.ID;
+		 SET var2 = INREF.NAME;
+		 INSERT INTO Database.SYSTEM.SAMPLE (ID,NAME) VALUES (var1,var2);
+		
+		
+
+--		DECLARE varsel ROW;
+--		SET varsel = 'SELECT ID, NAME FROM Database.SYSTEM.SampleTable';
+--		PASSTHRU(varsel);		
+--        SET .XMLNSC.Result = varsel.data;
+
+
+
+
+               -- 	FOR SELECT (WITH PASSTHRU)-----------------------------------------------------------
+--  DECLARE resultRow ROW;
+--
+--        -- E3xecute the SQL query and retrieve data into the reference
+--        set resultRow = 'SELECT ID, NAME INTO resultRow FROM SampleTable WHERE ID = 1';
+--
+--        -- Set the output message tree (OutputRoot) with the retrieved data
+--        SET  Root.XMLNSC.Output.ID = resultRow.ID;
+--        SET  Root.XMLNSC.Output.NAME = resultRow.NAME;
+--		
+
+		RETURN TRUE;
+	END;
+END MODULE;

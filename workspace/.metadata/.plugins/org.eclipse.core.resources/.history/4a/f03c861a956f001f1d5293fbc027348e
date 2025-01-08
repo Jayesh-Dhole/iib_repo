@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:OracleModel="http:///com/ibm/db/models/oracle/oracle.ecore" xmlns:SQLSchema="http:///org/eclipse/datatools/modelbase/sql/schema.ecore">
+  <OracleModel:OracleDatabase xmi:id="_2z6e8G-REe-RPqF8EABcfw" name="orcl" vendor="Oracle" version="11" schemas="_20BMoG-REe-RPqF8EABcfw">
+    <eAnnotations xmi:id="_2z6e8W-REe-RPqF8EABcfw" source="ConnectionURI">
+      <details xmi:id="_2z6e8m-REe-RPqF8EABcfw" key="ConnectionKey" value="orcl"/>
+    </eAnnotations>
+  </OracleModel:OracleDatabase>
+  <SQLSchema:Schema xmi:id="_20BMoG-REe-RPqF8EABcfw" name="SYSKM" database="_2z6e8G-REe-RPqF8EABcfw"/>
+</xmi:XMI>
