@@ -1,9 +1,0 @@
-CREATE COMPUTE MODULE pub_flow_Compute
-CREATE FUNCTION Main() RETURNS BOOLEAN
-BEGIN
-    -- Set the topic string in the message header
-    SET OutputRoot.MQMD.TopicString = 'MyTopic';
-    
-    -- Pass the message to the next node
-    RETURN TRUE;
-END;

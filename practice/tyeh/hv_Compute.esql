@@ -1,0 +1,29 @@
+CREATE COMPUTE MODULE hv_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+
+		DECLARE inref REFERENCE TO InputRoot.XMLNSC.emp;
+		declare value1 CHARACTER;
+		declare value2 CHARACTER;
+
+		set value1 = inref.emp1;
+		set value2 = inref.emp2;
+		call proc(value1, value2 , inref);
+
+		RETURN TRUE;
+	END;
+	----------------------------------------------------------------------------
+	CREATE PROCEDURE proc (in value11 character, in value22 CHARACTER, in inref1 REFERENCE)
+	BEGIN
+--		CREATE LASTCHILD OF OutputRoot DOMAIN 'XMLNSC';
+--		CREATE LASTCHILD OF OutputRoot.XMLNSC NAME 'emp';
+		CREATE FIELD OutputRoot.XMLNSC.emp[1];
+		DECLARE outref REFERENCE TO OutputRoot.XMLNSC.emp;
+		
+		set outref.result = 'executed successfully';
+		set outref.value1 = value11;
+		set outref.value2 = value22;
+	END;
+END MODULE;

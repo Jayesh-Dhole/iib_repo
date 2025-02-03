@@ -1,8 +1,0 @@
-/*EATE FUNCTION Main() RETURNS BOOLE*/
-	BEGIN
-		CALL SelectMultipleData(Environment.Result1[],Environment.Result2[]);
-		SET OutputRoot.JSON.Display.Table.Data=Environment.Result1[];
-		RETURN TRUE;
-	END;
-
-	

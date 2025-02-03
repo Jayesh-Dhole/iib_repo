@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<MessageBroker name="16-12-24-xml validation">
-  <XSDCollection href="platform:/resource/16-12-24-xml validation/xml validation schema.xsd" prefix="" targetNamespace="">
-    <element href="platform:/resource/16-12-24-xml validation/xml validation schema.xsd#//Input;XSDElementDeclaration" name="Input"/>
-  </XSDCollection>
-</MessageBroker>

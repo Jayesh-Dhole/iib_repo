@@ -1,0 +1,28 @@
+CREATE COMPUTE MODULE sample_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+
+		DECLARE inref REFERENCE TO InputRoot.XMLNSC.emp;
+		declare value1 CHARACTER;
+		set value1 = inref.emp1;
+
+		declare value2 CHARACTER;
+		set value2 = inref.emp2;
+
+		call proc(value1, value2 , inref);
+
+		RETURN TRUE;
+	END;
+	----------------------------------------------------------------------------
+	CREATE PROCEDURE proc (in value1 character, in value2 CHARACTER, in inref REFERENCE)
+	BEGIN
+		CREATE FIELD OutputRoot.XMLNSC.res[1];
+		DECLARE outref REFERENCE TO OutputRoot.XMLNSC.res[1];
+
+		set outref.result = 'executed successfully';
+		set outref.value1 = inref.value1 ;
+		set outref.value2 = inref.value2 ;
+	END;
+END MODULE;

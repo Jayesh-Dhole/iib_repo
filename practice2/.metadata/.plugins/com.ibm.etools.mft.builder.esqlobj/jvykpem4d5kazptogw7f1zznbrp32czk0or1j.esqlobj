@@ -1,9 +1,0 @@
-/*EATE PROCEDURE CopyEntireMessage() BEGIN
---		DECLARE myblob BLOB;
---		DECLARE inref REFERENCE TO InputRoot.JSON.Data.Root;
---		SET myblob = ASBITSTREAM(inref);
---		set OutputRoot.BLOB.BLOB.Result = myblob;
---		--SET OutputRoot = InputRoot;
---	END;
---	
-	CREATE FUNCTION Main() RETURNS BOOLE*/

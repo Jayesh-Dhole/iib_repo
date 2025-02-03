@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<MessageBroker name="file_parseRedordbyrecord">
-  <XSDCollection href="platform:/resource/file_parseRedordbyrecord/IBMdefined/RecordSeparatedFieldFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/RecordSeparatedFieldFormat"/>
-</MessageBroker>

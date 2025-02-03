@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<MessageBroker name="04-12-24-FILE-FIXED-LENGTH">
-  <XSDCollection href="platform:/resource/04-12-24-FILE-FIXED-LENGTH/IBMdefined/CommaSeparatedFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
-  <XSDCollection href="platform:/resource/04-12-24-FILE-FIXED-LENGTH/dsaaas.xsd" prefix="" targetNamespace="">
-    <element href="platform:/resource/04-12-24-FILE-FIXED-LENGTH/dsaaas.xsd#//dsaaas;XSDElementDeclaration" name="dsaaas"/>
-  </XSDCollection>
-</MessageBroker>

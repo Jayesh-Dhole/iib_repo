@@ -6,13 +6,13 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Mapping_App/icons/full/obj16/Map_flow.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Mapping_App/icons/full/obj30/Map_flow.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmMSLMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="296,149" mappingExpression="msl://{default}#Map_flow_Mapping">
+      <nodes xmi:type="ComIbmMSLMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="392,88" mappingExpression="msl://{default}#Map_flow_Mapping">
         <translation xmi:type="utility:ConstantString" string="Mapping"/>
       </nodes>
-      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="76,147" queueName="InputQ" destinationQueueManagerName="QueueMgr" messageDomainProperty="XMLNSC">
+      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="172,86" queueName="InputQ" destinationQueueManagerName="QueueMgr" messageDomainProperty="XMLNSC">
         <translation xmi:type="utility:ConstantString" string="MQ Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="520,154" queueName="OutputQ" destinationQueueManagerName="QueueMgr" policyUrl="{Policy}:Endpoint_p">
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="616,93" queueName="OutputQ" destinationQueueManagerName="QueueMgr" policyUrl="{Policy}:Endpoint_p">
         <translation xmi:type="utility:ConstantString" string="MQ Output"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

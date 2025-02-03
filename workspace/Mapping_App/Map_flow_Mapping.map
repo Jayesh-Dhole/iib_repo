@@ -3,24 +3,49 @@
     <inlinedXMLSchema>
         <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
-       
-  <xsd:element name="food" nillable="true"> 
-    <xsd:complexType> 
-      <xsd:sequence> 
-        <xsd:element name="name" nillable="true" type="xsd:string"/> 
-        <xsd:element name="price" nillable="true" type="xsd:string"/> 
-        <xsd:element name="description" nillable="true" type="xsd:string"/> 
-        <xsd:element name="calories" nillable="true" type="xsd:string"/> 
-      </xsd:sequence> 
-    </xsd:complexType> 
-  </xsd:element> 
+    
+        
    
+  <xsd:element name="food" nillable="true"> 
+      
+     
+    <xsd:complexType> 
+        
+       
+      <xsd:sequence> 
+          
+         
+        <xsd:element name="name" nillable="true" type="xsd:string"/> 
+          
+         
+        <xsd:element name="price" nillable="true" type="xsd:string"/> 
+          
+         
+        <xsd:element name="description" nillable="true" type="xsd:string"/> 
+          
+         
+        <xsd:element name="calories" nillable="true" type="xsd:string"/> 
+          
+       
+      </xsd:sequence> 
+        
+     
+    </xsd:complexType> 
+      
+   
+  </xsd:element> 
+    
+    
+ 
 </xsd:schema> 
 ]]>
     </inlinedXMLSchema>
     <input path="/Sample.xsd" var="var2"/>
     <input inlinedXMLSchema="true" path="../schema_0.xsd" var="var1"/>
     <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
     <generation engine="xquery"/>
     <mappingDeclaration name="Map_flow_Mapping">
         <input path="$var2/mb:msg(food,assembly,XMLNSC,Properties)" var="MessageAssembly"/>

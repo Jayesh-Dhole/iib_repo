@@ -1,4 +1,0 @@
-CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot.BLOB.BLOB = InputRoot.SOAP.Attachment.*.BLOB.BLOB;
-		SET OutputRoot.SOAP.Body.ns:NewOperationResponse.out = InputRoot.SOAP.Body.ns:NewOperation.in;
-	END;

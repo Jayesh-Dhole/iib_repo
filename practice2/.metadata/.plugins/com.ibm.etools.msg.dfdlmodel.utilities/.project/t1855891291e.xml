@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<MessageBroker name="19-12-24-Database_Inputnode">
-  <XSDCollection href="platform:/resource/19-12-24-Database_Inputnode/xe/sys/wedwedcwedc.xsd" prefix="xesys" targetNamespace="http://xe/sys">
-    <element href="platform:/resource/19-12-24-Database_Inputnode/xe/sys/wedwedcwedc.xsd#//EMP1;XSDElementDeclaration" name="EMP1" type="mlib://19-12-24-Database_Inputnode#/-/complexType{http://xe/sys}EMP1Type"/>
-    <element href="platform:/resource/19-12-24-Database_Inputnode/xe/sys/wedwedcwedc.xsd#//EMP_EVENT;XSDElementDeclaration=1" name="EMP_EVENT" type="mlib://19-12-24-Database_Inputnode#/-/complexType{http://xe/sys}EMP_EVENTType"/>
-    <complexType baseType="mlib://19-12-24-Database_Inputnode#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/19-12-24-Database_Inputnode/xe/sys/wedwedcwedc.xsd#//EMP1Type;XSDComplexTypeDefinition" name="EMP1Type"/>
-    <complexType baseType="mlib://19-12-24-Database_Inputnode#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/19-12-24-Database_Inputnode/xe/sys/wedwedcwedc.xsd#//EMP_EVENTType;XSDComplexTypeDefinition=1" name="EMP_EVENTType"/>
-  </XSDCollection>
-</MessageBroker>

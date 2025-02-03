@@ -1,8 +1,0 @@
-/*EATE FUNCTION Main() RETURNS BOOLE*/
-	BEGIN
-		DECLARE inref REFERENCE TO Root.XMLNSC.Employee;
-		
-		INSERT INTO Database.my.DATA_INSERT_TABLE (ID, NAME, ADDRESS ) VALUES (inref.ID, inref.Name, inref.Address);
-		RETURN TRUE;
-	END;
-
