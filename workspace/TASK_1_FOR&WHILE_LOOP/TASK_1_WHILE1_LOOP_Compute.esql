@@ -17,10 +17,15 @@ CREATE COMPUTE MODULE TASK_1_WHILE1_LOOP_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		DECLARE inref REFERENCE TO InputRoot.JSON.Data.Data.ResultData.MessageArrayTest.Item.Folder[1];
-		DECLARE i INTEGER 1;
-		WHILE LASTMOVE(inref) DO
-			 CREATE LASTCHILD OF OutputRoot.XMLNSC.Data.ResultData.MessageArrayTest.Folder[I] NAME FieldA VALUE inref.FieldA;
-		END WHILE;
-	END;  
+		
+		declare inref reference to InputROOT.XMLNSC.breakfast_menu.food[1];
+		declare i integer 1; 
+		declare outref reference to OutputRoot.JSON.Data.breakfast_menu.Item.food[i];
+		while LASTMOVE(inref) DO
+			create lastchild of outref name 'name' value inref.name;
+			create lastchild of outref name 'price' value inref.price;
+			create lastchild of outref name 'description' value inref.description;
+			create lastchild of outref name 'calories' value inref.calories;
+		end while;
+	END;
 END MODULE;

@@ -7,25 +7,25 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/ALLNodes/icons/full/obj16/SOAP.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/ALLNodes/icons/full/obj30/SOAP.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmSOAPInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="180,12" useHTTPTransport="true">
+      <nodes xmi:type="ComIbmSOAPInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="172,55" useHTTPTransport="true">
         <translation xmi:type="utility:ConstantString" string="SOAP Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmSOAPReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="173,87">
+      <nodes xmi:type="ComIbmSOAPReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="165,130">
         <translation xmi:type="utility:ConstantString" string="SOAP Reply"/>
       </nodes>
-      <nodes xmi:type="ComIbmSOAPRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="170,156" useHTTPTransport="true" sslProtocol="TLS">
+      <nodes xmi:type="ComIbmSOAPRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="162,199" useHTTPTransport="true" sslProtocol="TLS">
         <translation xmi:type="utility:ConstantString" string="SOAP Request"/>
       </nodes>
-      <nodes xmi:type="ComIbmSOAPAsyncRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="488,4" useHTTPTransport="true" sslProtocol="SSL" useAsyncSocket="true">
+      <nodes xmi:type="ComIbmSOAPAsyncRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="483,22" useHTTPTransport="true" sslProtocol="SSL" useAsyncSocket="true">
         <translation xmi:type="utility:ConstantString" string="SOAP Async Request"/>
       </nodes>
-      <nodes xmi:type="ComIbmSOAPAsyncResponse.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="500,59">
+      <nodes xmi:type="ComIbmSOAPAsyncResponse.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="494,102">
         <translation xmi:type="utility:ConstantString" string="SOAP Async Response"/>
       </nodes>
-      <nodes xmi:type="ComIbmSOAPEnvelope.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="490,112" createEnvelope="true">
+      <nodes xmi:type="ComIbmSOAPEnvelope.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="487,170" createEnvelope="true">
         <translation xmi:type="utility:ConstantString" string="SOAP Envelope"/>
       </nodes>
-      <nodes xmi:type="ComIbmSOAPExtract.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="492,168">
+      <nodes xmi:type="ComIbmSOAPExtract.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="482,249">
         <translation xmi:type="utility:ConstantString" string="SOAP Extract"/>
       </nodes>
     </composition>

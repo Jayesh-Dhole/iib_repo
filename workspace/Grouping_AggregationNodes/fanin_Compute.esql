@@ -19,11 +19,9 @@ CREATE COMPUTE MODULE fanin_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		set OutputRoot = InputRoot;
-
 		DECLARE inref1 REFERENCE TO InputRoot.ComIbmAggregateReplyBody.out1.XMLNSC.First;
 		DECLARE inref2 REFERENCE TO InputRoot.ComIbmAggregateReplyBody.out2.XMLNSC.Second;
-
+		
 		SET OutputRoot.XMLNSC.Student.First.ID = inref1.ID;
 		SET OutputRoot.XMLNSC.Student.First.Name = inref1.Name;
 		SET OutputRoot.XMLNSC.Student.Second.ID = inref2.ID;

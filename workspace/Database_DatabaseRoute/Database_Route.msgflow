@@ -6,16 +6,16 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Database_DatabaseRoute/icons/full/obj16/Database_Route.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Database_DatabaseRoute/icons/full/obj30/Database_Route.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="114,54" URLSpecifier="/path" messageDomainProperty="XMLNSC">
+      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="80,157" URLSpecifier="/path" messageDomainProperty="XMLNSC">
         <translation xmi:type="utility:ConstantString" string="HTTP Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="710,17">
+      <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="684,87">
         <translation xmi:type="utility:ConstantString" string="HTTP Reply"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="703,108" outputDirectory="C:\Users\Sreenivas Bandaru\Documents\FileOutput1" outputFilename="aaa" outputMode="append">
+      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="694,247" outputDirectory="C:\Users\Sreenivas Bandaru\Documents\FileOutput1" outputFilename="aaa" outputMode="append">
         <translation xmi:type="utility:ConstantString" string="File Output"/>
       </nodes>
-      <nodes xmi:type="ComIbmDatabaseRoute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="411,49" dataSourceName="{Policy}:DatabaseRoutePol" sqlQuery="SELECT EMP1.EMP_NAME&#xA;FROM EMP1&#xA;WHERE EMP1.EMP_ID = ?&#xA;ORDER BY EMP1.EMP_NAME ASC" tableNameComboValues="0,0,0~EMP1" columnNameComboValues="0,1,0~EMP_ID,EMP_NAME" operatorComboValues="2,0,0~=" valueTypeComboValues="2,0,0~Element">
+      <nodes xmi:type="ComIbmDatabaseRoute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="382,168" dataSourceName="{Policy}:DatabaseRoutePol" sqlQuery="SELECT EMP1.EMP_NAME&#xA;FROM EMP1&#xA;WHERE EMP1.EMP_ID = ?&#xA;ORDER BY EMP1.EMP_NAME ASC" tableNameComboValues="0,0,0~EMP1" columnNameComboValues="0,1,0~EMP_ID,EMP_NAME" operatorComboValues="2,0,0~=" valueTypeComboValues="2,0,0~Element">
         <outTerminals terminalNodeID="Match" dynamic="true" label="Match"/>
         <outTerminals terminalNodeID="out1" dynamic="true" label="out1"/>
         <translation xmi:type="utility:ConstantString" string="Database Route"/>

@@ -7,19 +7,19 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/ALLNodes/icons/full/obj16/file.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/ALLNodes/icons/full/obj30/file.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="332,33" messageDomainProperty="XMLNSC" recordDetection="parsedRecordSequence" fileFtp="true" fileFtpDirectory="">
+      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="61,25" messageDomainProperty="XMLNSC" recordDetection="parsedRecordSequence" fileFtp="true" fileFtpDirectory="">
         <translation xmi:type="utility:ConstantString" string="File Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="322,94">
+      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="51,86">
         <translation xmi:type="utility:ConstantString" string="File Output"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileRead.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="510,33">
+      <nodes xmi:type="ComIbmFileRead.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="250,32">
         <translation xmi:type="utility:ConstantString" string="File Read"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileExists.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="524,93">
+      <nodes xmi:type="ComIbmFileExists.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="264,92">
         <translation xmi:type="utility:ConstantString" string="File Exists"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileIterator.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="424,154">
+      <nodes xmi:type="ComIbmFileIterator.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="150,150">
         <translation xmi:type="utility:ConstantString" string="File Iterator"/>
       </nodes>
     </composition>

@@ -1,3 +1,5 @@
+
+
 CREATE COMPUTE MODULE Database_Operation_mf_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN

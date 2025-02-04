@@ -16,28 +16,25 @@ CREATE COMPUTE MODULE TASK_1_XML_CONVERSION_Compute
 		END WHILE;
 	END;
 
-	CREATE PROCEDURE CopyEntireMessage() 
-	BEGIN
-		DECLARE i INTEGER 1;
-		--DECLARE inref REFERENCE TO InputRoot.JSON.Data.Outer.Inner1.Inner2[];
-		
-		-- Loop through the JSON array
-		FOR inref AS InputRoot.JSON.Data.Outer.Inner1.Inner2.Item[] DO
-			-- Copy data from JSON to XMLNSC structure
-			SET OutputRoot.XMLNSC.Outer.Inner1.Inner2[i].Name = inref.Data.Name;
-			SET OutputRoot.XMLNSC.Outer.Inner1.Inner2[i].Id = inref.Data.Id;
-			SET i = i + 1;
-		END FOR;
-	END;	
-END MODULE;
-
-----JSON TO XML CONVERSION USING FOR LOOP 
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		--DECLARE inref REFERENCE TO InputRoot.XMLNSC.Data.ResultData.MessageArrayTest.Item[];
+		--XML TO JSON CONVERSION USING FOR LOOP
 --		DECLARE i INTEGER 1;
-----		DECLARE outref = OutputRoot.XMLNSC.ResultData.MessageArrayTest.Item.Folder[i];
---		FOR inref AS InputRoot.JSON.Data.Data.ResultData.MessageArrayTest.Item[] DO
---			SET OutputRoot.XMLNSC.ResultData.MessageArrayTest.Item.Folder[i].FieldA = inref.Folder.FieldA;
---			SET OutputRoot.XMLNSC.ResultData.MessageArrayTest.Item.Folder[i].FieldB = inref.Folder.FieldB;
---		
+--		FOR inref AS InputRoot.XMLNSC.Data.ResultData.MessageArrayTest.Item[] DO
+--			SET OutputRoot.JSON.Data.ResultData.MessageArrayTest.Item.Folder[i].FieldA = inref.Folder.FieldA;
+--			SET OutputRoot.JSON.Data.ResultData.MessageArrayTest.Item.Folder[i].FieldB = inref.Folder.FieldB;
 --		SET i = i + 1;
 --		END FOR;
---	END;
+	
+		
+		--JSON TO XML CONVERSION USING FOR LOOP 
+		DECLARE i INTEGER 1;
+--		DECLARE outref = OutputRoot.XMLNSC.ResultData.MessageArrayTest.Item.Folder[i];
+		FOR inref AS InputRoot.JSON.Data.Data.ResultData.MessageArrayTest.Item[] DO
+			SET OutputRoot.XMLNSC.ResultData.MessageArrayTest.Item.Folder[i].FieldA = inref.Folder.FieldA;
+			SET OutputRoot.XMLNSC.ResultData.MessageArrayTest.Item.Folder[i].FieldB = inref.Folder.FieldB;
+		
+		SET i = i + 1;
+		END FOR;
+	END;
+END MODULE;

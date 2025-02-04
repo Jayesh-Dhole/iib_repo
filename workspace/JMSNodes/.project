@@ -3,7 +3,6 @@
 	<name>JMSNodes</name>
 	<comment></comment>
 	<projects>
-		<project>JMSNodesJava</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

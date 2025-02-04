@@ -6,13 +6,13 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/stored_procedure/icons/full/obj16/stored_procedure_mf.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/stored_procedure/icons/full/obj30/stored_procedure_mf.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="267,59" inputDirectory="C:\Users\Sreenivas Bandaru\Documents\FileNodeDir\Input" messageDomainProperty="XMLNSC">
+      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="39,157" inputDirectory="C:\Users\Sreenivas Bandaru\Documents\FileNodeDir\Input" messageDomainProperty="XMLNSC">
         <translation xmi:type="utility:ConstantString" string="File Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="763,68" outputDirectory="C:\Users\Sreenivas Bandaru\Documents\FileNodeDir\Output" outputFilename="ad">
+      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="468,156" outputDirectory="C:\Users\Sreenivas Bandaru\Documents\FileNodeDir\Output" outputFilename="ad">
         <translation xmi:type="utility:ConstantString" string="File Output"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="502,58" dataSource="xyz" computeExpression="esql://routine/#stored_procedure_mf_Compute.Main" computeMode="all">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="274,156" dataSource="xyz" computeExpression="esql://routine/#stored_procedure_mf_Compute.Main" computeMode="all">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

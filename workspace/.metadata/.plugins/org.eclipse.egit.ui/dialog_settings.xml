@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel" value="0"/>
 	<list key="RepositorySelectionPage.UsedUris">
-		<item value="https://github.com/yashRay-git/IIB_WORK_TIME.git"/>
-		<item value="https://github.com/Jayesh-Dhole/PRACTICE_GIT_IIB.git"/>
 		<item value="https://github.com/adesh-nimase/Adesh_IIB.git"/>
 	</list>
 	<list key="EGit.KnownHosts">
@@ -12,23 +9,18 @@
 		<item value="github.com"/>
 	</list>
 	<list key="CommitDialog.authorValues">
-		<item value="Sreenivas Bandaru &lt;Sreenivas Bandaru@192.168.3.134&gt;"/>
 		<item value="Sreenivas Bandaru &lt;Sreenivas Bandaru@192.168.1.89&gt;"/>
 	</list>
 	<list key="CommitDialog.committerValues">
-		<item value="Sreenivas Bandaru &lt;Sreenivas Bandaru@192.168.3.134&gt;"/>
 		<item value="Sreenivas Bandaru &lt;Sreenivas Bandaru@192.168.1.89&gt;"/>
 	</list>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
 		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
-		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
-		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="200,200"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="200,200"/>
 		<item key="sortItemState" value="false"/>
 	</section>
 	<section name="GitCommitMessageComponent">
-		<list key="C:\Users\Sreenivas Bandaru\git\hellonew\.git">
-			<item value="empty"/>
-		</list>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="440"/>
@@ -40,8 +32,5 @@
 			<item value="600"/>
 			<item value="400"/>
 		</list>
-	</section>
-	<section name="GitImportWizard">
-		<item key="GitProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
 	</section>
 </section>

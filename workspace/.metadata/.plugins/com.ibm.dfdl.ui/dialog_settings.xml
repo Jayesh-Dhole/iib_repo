@@ -10,14 +10,8 @@
 		<list key="ParserInputs">
 			<item value="C:\Users\Sreenivas Bandaru\Documents\fixedlength.txt"/>
 			<item value="C:\Users\Sreenivas Bandaru\Documents\delimitedinput.txt"/>
-			<item value="C:\ftp\dfdlfile.txt"/>
-			<item value="/21-10-24-RCD-TASK/application.descriptor"/>
-			<item value="C:\Users\Sreenivas Bandaru\Desktop\DFDLMODEL.txt"/>
-			<item value="C:\FileOut\dfdlfile.txt"/>
-			<item value="C:\FileOut\inpforcsv.txt"/>
 		</list>
 		<list key="SerializerInputs">
-			<item value="C:\ftp\dfdlfile.txt"/>
 		</list>
 	</section>
 </section>

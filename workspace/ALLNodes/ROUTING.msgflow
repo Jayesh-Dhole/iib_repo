@@ -7,30 +7,30 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/ALLNodes/icons/full/obj16/ROUTING.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/ALLNodes/icons/full/obj30/ROUTING.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmRouteToLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="257,129">
+      <nodes xmi:type="ComIbmRouteToLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="72,151">
         <translation xmi:type="utility:ConstantString" string="Route To Label"/>
       </nodes>
-      <nodes xmi:type="ComIbmPassthru.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="461,187">
+      <nodes xmi:type="ComIbmPassthru.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="286,211">
         <translation xmi:type="utility:ConstantString" string="Pass through"/>
       </nodes>
-      <nodes xmi:type="ComIbmFilter.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="258,15" filterExpression="esql://routine/#ROUTING_Filter.Main">
+      <nodes xmi:type="ComIbmFilter.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="73,38" filterExpression="esql://routine/#ROUTING_Filter.Main">
         <translation xmi:type="utility:ConstantString" string="Filter"/>
       </nodes>
-      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="268,72">
+      <nodes xmi:type="ComIbmLabel.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="82,94">
         <translation xmi:type="utility:ConstantString" string="Label"/>
       </nodes>
-      <nodes xmi:type="ComIbmFlowOrder.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="462,15">
-        <translation xmi:type="utility:ConstantString" string="Flow Order"/>
-      </nodes>
-      <nodes xmi:type="ComIbmReSequence.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_8" location="461,75">
-        <translation xmi:type="utility:ConstantString" string="Resequence"/>
-      </nodes>
-      <nodes xmi:type="ComIbmSequence.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="461,130">
-        <translation xmi:type="utility:ConstantString" string="Sequence"/>
-      </nodes>
-      <nodes xmi:type="ComIbmRoute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="256,189">
+      <nodes xmi:type="ComIbmRoute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="71,211">
         <outTerminals terminalNodeID="Match" dynamic="true" label="Match"/>
         <translation xmi:type="utility:ConstantString" string="Route1"/>
+      </nodes>
+      <nodes xmi:type="ComIbmFlowOrder.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="283,38">
+        <translation xmi:type="utility:ConstantString" string="Flow Order"/>
+      </nodes>
+      <nodes xmi:type="ComIbmReSequence.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_8" location="282,98">
+        <translation xmi:type="utility:ConstantString" string="Resequence"/>
+      </nodes>
+      <nodes xmi:type="ComIbmSequence.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="287,154">
+        <translation xmi:type="utility:ConstantString" string="Sequence"/>
       </nodes>
     </composition>
     <propertyOrganizer/>

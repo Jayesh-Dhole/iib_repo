@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
 <preferenceForDFDLFile dfdlFileLocation="/File_FixedLen/dfdl.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Documents\fixedlength.txt" messageRootUsedForLastParse="dfdl"/>
-<preferenceForDFDLFile dfdlFileLocation="/04-212-24-FIXEDLENGTH-TO-CSV/input.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\FileOut\inpforcsv.txt" messageRootUsedForLastParse="input"/>
-<preferenceForDFDLFile dfdlFileLocation="/04-212-24-FIXEDLENGTH-TO-CSV/af.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\FileOut\inpforcsv.txt" messageRootUsedForLastParse="af"/>
-<preferenceForDFDLFile dfdlFileLocation="/04-12-24-OVERRIDE+WHOLE-FILE/ssaa.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\FileOut\dfdlfile.txt" messageRootUsedForLastParse="ssaa"/>
-<preferenceForDFDLFile dfdlFileLocation="/21-10-24-RCD-TASK/qw.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Desktop\DFDLMODEL.txt" messageRootUsedForLastParse="qw"/>
-<preferenceForDFDLFile dfdlFileLocation="/04-212-24-FIXEDLENGTH-TO-CSV/fixedlength.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\FileOut\inpforcsv.txt" messageRootUsedForLastParse="fixedlength"/>
-<preferenceForDFDLFile dfdlFileLocation="/04-212-24-FIXEDLENGTH-TO-CSV/csv.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\FileOut\inpforcsv.txt" messageRootUsedForLastParse="csv"/>
-<preferenceForDFDLFile dfdlFileLocation="/04-212-24-FIXEDLENGTH-TO-CSV/output.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\FileOut\inpforcsv.txt" messageRootUsedForLastParse="output"/>
+<preferenceForDFDLFile dfdlFileLocation="/File_FixedLen/dfdf.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Documents\fixedlength.txt" messageRootUsedForLastParse="dfdf"/>
+<preferenceForDFDLFile dfdlFileLocation="/File_Delimited/dfdl1.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="C:\Users\Sreenivas Bandaru\Documents\delimitedinput.txt" messageRootUsedForLastParse="dfdl1"/>
 </preferences>

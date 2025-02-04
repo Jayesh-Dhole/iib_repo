@@ -6,16 +6,16 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Loopback/icons/full/obj16/loopback.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Loopback/icons/full/obj30/loopback.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="352,69" computeExpression="esql://routine/#loopback_Compute.Main" computeMode="all">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="266,148" computeExpression="esql://routine/#loopback_Compute.Main" computeMode="all">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
-      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="104,72" URLSpecifier="/p1" messageDomainProperty="JSON">
+      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="69,154" URLSpecifier="/p1" messageDomainProperty="JSON">
         <translation xmi:type="utility:ConstantString" string="HTTP Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="796,74">
+      <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="755,155">
         <translation xmi:type="utility:ConstantString" string="HTTP Reply"/>
       </nodes>
-      <nodes xmi:type="com_ibm_connector_loopback_ComIbmRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="566,70" connectorName="iib-loopback-connector" dataSource="mongodsn" object="EMP" operation="create" securityIdentity="secid" timeoutMilliseconds="120000" dataLocation="$Body" outputDataLocation="$OutputRoot" copyToLocalEnv="true" messageDomainProperty="JSON">
+      <nodes xmi:type="com_ibm_connector_loopback_ComIbmRequest.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="480,149" connectorName="iib-loopback-connector" dataSource="mongodsn" object="EMP" operation="create" securityIdentity="secid" timeoutMilliseconds="120000" dataLocation="$Body" outputDataLocation="$OutputRoot" copyToLocalEnv="true" messageDomainProperty="JSON">
         <translation xmi:type="utility:ConstantString" string="Loop Back Request"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

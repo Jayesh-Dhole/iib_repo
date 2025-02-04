@@ -6,13 +6,13 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Stor_Pro_Operation/icons/full/obj16/Stor_pro_operation.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Stor_Pro_Operation/icons/full/obj30/Stor_pro_operation.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="446,55" dataSource="xyz" computeExpression="esql://routine/#Stor_pro_operation_Compute.Main" computeMode="all">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="275,116" dataSource="xyz" computeExpression="esql://routine/#Stor_pro_operation_Compute.Main" computeMode="all">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="201,59" inputDirectory="C:\Users\Sreenivas Bandaru\Documents\FileNodeDir\Input" messageDomainProperty="XMLNSC">
+      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="30,120" inputDirectory="C:\Users\Sreenivas Bandaru\Documents\FileNodeDir\Input" messageDomainProperty="XMLNSC">
         <translation xmi:type="utility:ConstantString" string="File Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="705,60" outputDirectory="C:\Users\Sreenivas Bandaru\Documents\FileNodeDir\Output" outputFilename="zzz">
+      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="534,121" outputDirectory="C:\Users\Sreenivas Bandaru\Documents\FileNodeDir\Output" outputFilename="zzz">
         <translation xmi:type="utility:ConstantString" string="File Output"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

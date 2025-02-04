@@ -6,10 +6,10 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/GET_Node/icons/full/obj16/flow_2.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/GET_Node/icons/full/obj30/flow_2.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="291,83" queueName="O1" destinationQueueManagerName="QueueMgr" messageDomainProperty="XMLNSC">
+      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="159,107" queueName="O1" destinationQueueManagerName="QueueMgr" messageDomainProperty="XMLNSC">
         <translation xmi:type="utility:ConstantString" string="MQ Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmMQGet.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="538,83" queueName="O2" destinationQueueManagerName="QueueMgr" messageDomainProperty="XMLNSC" copyMessage="copyEntireMessage" getWithMessageID="true">
+      <nodes xmi:type="ComIbmMQGet.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="406,107" queueName="O2" destinationQueueManagerName="QueueMgr" messageDomainProperty="XMLNSC" copyMessage="copyEntireMessage" getWithMessageID="true">
         <translation xmi:type="utility:ConstantString" string="MQ Get"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

@@ -6,10 +6,10 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Remote_Transfer/icons/full/obj16/flo.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Remote_Transfer/icons/full/obj30/flo.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="131,63" inputDirectory="C:\ftp send" messageDomainProperty="XMLNSC">
+      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="46,120" inputDirectory="C:\Users\Sreenivas Bandaru\Documents\FileNodeDir\Input" messageDomainProperty="XMLNSC">
         <translation xmi:type="utility:ConstantString" string="File Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="541,60" outputDirectory="C:\ftp" outputFilename="hello" fileFtp="true" fileFtpServer="192.168.1.70:21" fileFtpUser="secid">
+      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="456,117" outputDirectory="C:/usr1" outputFilename="1182" fileFtp="true" fileFtpServer="192.168.3.54:21" fileFtpUser="ftp">
         <translation xmi:type="utility:ConstantString" string="File Output"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

@@ -1,3 +1,5 @@
+
+
 CREATE COMPUTE MODULE soap_over_mf_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
@@ -18,5 +20,6 @@ CREATE COMPUTE MODULE soap_over_mf_Compute
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 	SET OutputLocalEnvironment.Destination.SOAP.Request.Transport.HTTP.WebServiceURL = 'http://localhost:7800/path2';
+	
 	END;
 END MODULE;

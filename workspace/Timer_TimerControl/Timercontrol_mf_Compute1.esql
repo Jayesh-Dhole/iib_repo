@@ -1,20 +1,22 @@
+
+
 CREATE COMPUTE MODULE Timercontrol_mf_Compute1
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		-- CALL CopyMessageHeaders();
 		CALL CopyEntireMessage();
 		RETURN TRUE;
-       	END;
+	END;
 
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		SET OutputRoot = InputRoot;
 		SET OutputLocalEnvironment.TimeoutRequest.Action = 'SET';
 		SET OutputLocalEnvironment.TimeoutRequest.Identifier = 'id1';
-		SET OutputLocalEnvironment.TimeoutRequest.StartDate = '2024-11-30';  
-		SET OutputLocalEnvironment.TimeoutRequest.StartTime = '03:54:00';
-		SET OutputLocalEnvironment.TimeoutRequest.Count = 2;  
-		SET OutputLocalEnvironment.TimeoutRequest.Interval = 5; 
+		SET OutputLocalEnvironment.TimeoutRequest.StartDate = '2024-08-29';  
+		SET OutputLocalEnvironment.TimeoutRequest.StartTime = '02:17:00';
+		SET OutputLocalEnvironment.TimeoutRequest.Count = 5;  
+		SET OutputLocalEnvironment.TimeoutRequest.Interval = 20; 
 		SET OutputLocalEnvironment.TimeoutRequest.IgnoredMissed = TRUE;  
 		SET OutputLocalEnvironment.TimeoutRequest.AllowOverWrite = TRUE;  
 		

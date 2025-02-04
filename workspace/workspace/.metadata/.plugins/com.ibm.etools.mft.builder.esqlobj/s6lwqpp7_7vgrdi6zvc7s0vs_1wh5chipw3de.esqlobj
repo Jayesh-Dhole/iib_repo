@@ -1,8 +1,0 @@
-/*EATE FUNCTION Main() RETURNS BOOLE*/
-	BEGIN
-		DECLARE var REFERENCE TO InputRoot.XMLNSC.STD;
-		call Insertion(var.ID,var.name,var.marks);
-		RETURN TRUE;
-	END;
-
-	

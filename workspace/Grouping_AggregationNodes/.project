@@ -3,8 +3,6 @@
 	<name>Grouping_AggregationNodes</name>
 	<comment></comment>
 	<projects>
-		<project>Shared_Lib1</project>
-		<project>static_lib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

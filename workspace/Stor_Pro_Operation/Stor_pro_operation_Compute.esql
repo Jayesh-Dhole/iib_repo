@@ -1,3 +1,5 @@
+
+
 CREATE COMPUTE MODULE Stor_pro_operation_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN

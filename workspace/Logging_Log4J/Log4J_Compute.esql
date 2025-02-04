@@ -1,3 +1,4 @@
+
 DECLARE external_var EXTERNAL CHARACTER 'C:\Inlog\Log4jConfigurationFile.xml';
 DECLARE var1 BOOLEAN;
 CREATE COMPUTE MODULE Log4J_Compute
@@ -8,6 +9,8 @@ CREATE COMPUTE MODULE Log4J_Compute
 		CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
+
+	
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		DECLARE in_data,out_data CHARACTER;

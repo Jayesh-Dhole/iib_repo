@@ -1,5 +1,3 @@
-
-
 CREATE COMPUTE MODULE fl_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
@@ -8,18 +6,19 @@ CREATE COMPUTE MODULE fl_Compute
 		RETURN TRUE;
 	END;
 
-	CREATE PROCEDURE CopyMessageHeaders() BEGIN
-		DECLARE I INTEGER 1;
-		DECLARE J INTEGER;
-		SET J = CARDINALITY(InputRoot.*[]);
-		WHILE I < J DO
-			SET OutputRoot.*[I] = InputRoot.*[I];
-			SET I = I + 1;
-		END WHILE;
-	END;
-
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot.JSON.Data = InputRoot.XMLNSC;
-		SET OutputRoot.MQMD.ReplyToQ = 'Out1';
+		-- CREATE LASTCHILD OF OutputRoot DOMAIN('JSON');
+		-- SET OutputRoot.JSON.Data.Result = InputRoot.XMLNSC.A;
+		-- CREATE LASTCHILD OF OutputRoot DOMAIN('MQMD');
+		-- SET OutputRoot.MQMD.ReplyToQ = 'Out2';
+		--SET OutputRoot.Properties = InputRoot.Properties;
+		SET OutputRoot.JSON.Data.Result = InputRoot.XMLNSC.A;
+		CREATE LASTCHILD OF OutputRoot DOMAIN('MQMD');
+        
+        -- Set the ReplyToQ field
+        SET OutputRoot.MQMD.ReplyToQ = 'Out3';	
+        SET OutputRoot.MQMD.Format = 'MQSTR';
+        SET OutputRoot.MQMD.Encoding = InputRoot.Properties.Encoding;
+        SET OutputRoot.MQMD.CodedCharSetId = InputRoot.Properties.CodedCharSetId;
 	END;
 END MODULE;

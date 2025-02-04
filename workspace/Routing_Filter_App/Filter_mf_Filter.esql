@@ -2,9 +2,9 @@ CREATE FILTER MODULE Filter_mf_Filter
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		DECLARE var REFERENCE TO Root.XMLNSC.Name;
-        IF var = 'Jayesh' THEN
+        IF var = 'Adesh' THEN
             RETURN TRUE;
-        ELSEIF var = 'Jay' THEN
+        ELSEIF var = 'AAdit' THEN
             RETURN FALSE;
         ELSE
             RETURN UNKNOWN;

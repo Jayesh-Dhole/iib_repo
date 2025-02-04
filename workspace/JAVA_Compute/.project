@@ -5,6 +5,7 @@
 	<projects>
 		<project>JAVA_ComputeJava</project>
 		<project>JCN_Policy</project>
+		<project>JAVA_ComputeNodeJava</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
