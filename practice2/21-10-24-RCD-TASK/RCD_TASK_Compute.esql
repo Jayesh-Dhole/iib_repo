@@ -24,7 +24,7 @@ CREATE COMPUTE MODULE RCD_TASK_Compute
 				
 	    SET myblob = ASBITSTREAM(inref);
 	    
-	    	    SET char1 = CAST(myblob AS CHARACTER CCSID InputRoot.Properties.CodedCharSetId ENCODING InputRoot.Properties.Encoding);
+	    SET char1 = CAST(myblob AS CHARACTER CCSID InputRoot.Properties.CodedCharSetId ENCODING InputRoot.Properties.Encoding);
 
 	    SET repl = REPLACE(char1, '"', '');
 	    

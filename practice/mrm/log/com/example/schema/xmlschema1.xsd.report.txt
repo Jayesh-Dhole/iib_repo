@@ -1,0 +1,12 @@
+
+
+Importing file: C:\Users\Sreenivas Bandaru\Documents\xmlschema1.xsd
+
+
+Elapsed time processing this message definition file: 6.982 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

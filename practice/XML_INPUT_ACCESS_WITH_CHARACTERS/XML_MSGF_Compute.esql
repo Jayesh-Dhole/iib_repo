@@ -1,0 +1,34 @@
+CREATE COMPUTE MODULE XML_MSGF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		--SET OutputRoot = InputRoot;
+		DECLARE inref BLOB;
+		SET inref = InputRoot.BLOB.BLOB;
+
+		DECLARE charref CHARACTER;
+		SET charref = CAST(inref AS CHARACTER CCSID 1208);
+
+		SET charref = SUBSTRING(charref FROM 15);
+		
+		DECLARE ref2 BLOB;
+		SET ref2 = CAST(charref as BLOB CCSID 1208 ENCODING 456);
+        
+        CREATE LASTCHILD OF OutputRoot DOMAIN('XMLNSC') PARSE(ref2);
+	END;
+END MODULE;
